@@ -20,6 +20,7 @@ a {
 html {
   background-color: var(--bg-color);
   scroll-behavior: smooth;
+  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
 }
 
 body {
@@ -27,8 +28,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--text-color);
-  width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 h1 {
@@ -65,12 +65,18 @@ small {
   display: block;
 }
 
-section {
+.container, section {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
 }
 
+
 section:not(#main) {
-  margin: 159px 0;
+  margin-top: 43px;
+  padding-top: 116px; /* for anchor scroll top padding */
+  margin-bottom: 159px;
 }
 
 p {
@@ -87,6 +93,11 @@ li {
   padding-left: 32px;
   background: url('img/list-item.svg') left center no-repeat;
   line-height: 37px;
+}
+
+em {
+  color: var(--primary);
+  font-style: normal;
 }
 
 .button {
@@ -119,7 +130,7 @@ a.button:active {
 
 #main {
   flex: 1;
-  min-height: calc(100vh - 66px); /* leave room for nav */
+  min-height: calc(100vh - 72px); /* leave room for nav */
 }
 
 #main .left {
@@ -134,7 +145,7 @@ a.button:active {
   background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
   width: 100%;
   height: 340px;
-  margin-top: -145px;
+  margin-top: -148px;
   transform: translateY(-33px);
 }
 
@@ -156,8 +167,7 @@ a.button:active {
   margin: 9px 0 19px -7px;
 }
 
-#main h1 span {
-  color: var(--primary);
+#main h1 em {
   display: block;
 }
 
@@ -192,11 +202,30 @@ a.button:active {
 
 nav {
   height: 38px;
-  padding: 14px 0;
+  padding: 20px 0 54px;
   position: sticky;
+  position: -webkit-sticky; /* for safari */
   top: 0;
   z-index: 1;
-  display: flex;
+  background: url(img/sticky.png) repeat-x 0 0;
+  background-attachment: fixed;
+}
+
+nav .container {
+  position: relative;
+  justify-content: flex-end;
+}
+
+nav a[href="#"] {
+  overflow: hidden;
+  text-indent: -200px; /* hiding the actual text, showing bg instead */
+  background: url(img/fade.png) no-repeat 41px 30px;
+  background-size: 173px auto;
+  background-attachment: fixed;
+  width: 173px;
+  height: 38px;
+  position: absolute;
+  left: 0;
 }
 
 nav .button {
@@ -206,18 +235,17 @@ nav .button {
 }
 
 #scroll-indicator {
-  flex: 1;
   font-size: 20px;
   line-height: 1.2;
   color: #c4c4c4;
-  line-height: 38px;
+  margin-top: -85px;
 }
 
 #scroll-indicator svg {
   fill: var(--primary);
   margin-right: 7px;
   position: relative;
-  top: 1px;
+  top: 3px;
 }
 
 .project .left {
