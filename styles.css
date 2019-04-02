@@ -28,7 +28,8 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--text-color);
-  margin: 0 auto; 
+  margin: 0 auto;
+  font-weight: 300;
 }
 
 h1 {
@@ -123,7 +124,7 @@ a.button:active {
   color: white;
 }
 
-.left {
+section .left {
   width: 579px;
   padding-right: 124px;
 }
@@ -219,8 +220,8 @@ nav .container {
 nav a[href="#"] {
   overflow: hidden;
   text-indent: -200px; /* hiding the actual text, showing bg instead */
-  background: url(img/fade.png) no-repeat 41px 30px;
-  background-size: 173px auto;
+  background: url(img/fade.png) repeat-x center 30px;
+  background-size: auto 30px;
   background-attachment: fixed;
   width: 173px;
   height: 38px;
@@ -327,6 +328,62 @@ nav .button {
   top: 198px;
   left: -59px;
   box-shadow: none;
+}
+
+#lets-talk {
+  padding-top: 110px;
+}
+
+footer {
+  min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
+  flex-direction: column;
+}
+
+#footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .left, footer .right {
+  width: 579px; 
+}
+
+#social {
+  margin-top: 36px;
+}
+
+#linkedin, #twitter {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+#linkedin {
+  background-color: #0071a1;
+}
+
+#linkedin:hover {
+  background-color: #1a96cb;
+}
+
+#linkedin:active {
+  background-color: #00567b;
+}
+
+#twitter {
+  background-color: #1da1f2;
+}
+
+#twitter:hover {
+  background-color: #50bcff;
+}
+
+#twitter:active {
+  background-color: #0979bd;
 }
 
 /* Mobile */
