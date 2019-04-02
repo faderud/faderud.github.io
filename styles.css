@@ -1,5 +1,5 @@
 /* reset */
-body, h1, h2 {
+body, h1, h2, h3, h4 {
   margin: 0;
 }
 
@@ -11,13 +11,15 @@ a {
 :root {
   --primary: #079e92;
   --secondary: #02786f;
-  --text-color: #494949;
-  --text-color-light: #9b9b9b;
+  --heading: #494949;
+  --text-color: #7e7e7e;
+  --text-light: #9b9b9b;
   --bg-color: #f0f2f2;
 }
 
 html {
   background-color: var(--bg-color);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,31 +36,93 @@ h1 {
   line-height: 86px;
   letter-spacing: -0.4px;
   font-weight: 500;
+  color: var(--heading);
 }
 
 h2 {
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 66px;
+  margin-bottom: 29px;
+  color: var(--primary);
+}
+
+h3 {
   font-weight: normal;
   font-size: 36px;
+  color: var(--heading);
+}
+
+h4 {
+  font-size: 18px;
+  color: var(--text-light);
+  font-weight: bold;
 }
 
 small {
   font-size: 18px;
-  color: var(--text-color-light);
-  font-weight: bold;
+  color: var(--text-light);
+  display: block;
 }
 
-.text, .visual {
+section {
   display: flex;
-  align-items: center;
+}
+
+section:not(#main) {
+  margin: 159px 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding-left: 32px;
+  background: url('img/list-item.svg') left center no-repeat;
+  line-height: 37px;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 38px;
+  padding: 0 16px;
+  color: var(--heading);
+  border-radius: 19px;
+  text-transform: uppercase;
+  border: solid 1px var(--primary);
+  transition: color 150ms linear, background-color 150ms linear;
+  display: inline-block;
+}
+
+a.button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+a.button:active {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.left {
+  width: 579px;
+  padding-right: 124px;
 }
 
 #main {
   flex: 1;
-  display: flex;
-  min-height: 100vh; /* leave room for nav */
+  min-height: calc(100vh - 66px); /* leave room for nav */
 }
 
-#main .text {
+#main .left {
   flex-grow: 1;
 }
 
@@ -71,6 +135,7 @@ small {
   width: 100%;
   height: 340px;
   margin-top: -145px;
+  transform: translateY(-33px);
 }
 
 /* hide if screen narrow */
@@ -80,9 +145,11 @@ small {
   }
 }
 
-#main .text, #main .visual {
+#main .left, #main .right {
   background: var(--bg-color); /* hides the background color strip */
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 #main h1 {
@@ -94,7 +161,7 @@ small {
   display: block;
 }
 
-#main h2 {
+#main h3 {
   margin-left: -3px;
 }
 
@@ -125,42 +192,24 @@ small {
 
 nav {
   height: 38px;
-  margin: 14px 0;
-  position: relative;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
   z-index: 1;
   display: flex;
-  display: none;
 }
 
-nav a {
+nav .button {
   background-color: white;
-  font-family: Effra;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 38px;
-  padding: 0 16px;
-  color: var(--text-color);
   margin-left: 8px;
-  border-radius: 19px;
-  text-transform: uppercase;
-  transition: all 150ms linear;
-}
-
-nav a:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-nav a:active {
-  background-color: var(--secondary);
-  color: white;
+  border: 0;
 }
 
 #scroll-indicator {
   flex: 1;
   font-size: 20px;
   line-height: 1.2;
-  color: #c2c4c4;
+  color: #c4c4c4;
   line-height: 38px;
 }
 
@@ -169,6 +218,87 @@ nav a:active {
   margin-right: 7px;
   position: relative;
   top: 1px;
+}
+
+.project .left {
+  width: 335px;
+  padding-right: 76px;
+  flex-shrink: 0;
+}
+
+.project h3{
+  margin-bottom: 29px;
+  margin-top: 27px;
+}
+
+.project img {
+  box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.project small {
+  margin-bottom: 32px;
+}
+
+.project .right {
+  position: relative;
+}
+
+#neura {
+  margin-left: 100px;
+}
+
+#neura-mobile {
+  position: absolute;
+  left: -100px;
+  bottom: -70px;
+}
+
+#evme {
+  padding-left: 550px;
+}
+
+#evme img {
+  margin: 0;
+}
+
+#evme .cards {
+  padding-top: 50px;
+}
+
+#evme .cards img {
+  margin: 0 auto 16px;
+  display: block;
+  border-radius: 3px;
+}
+
+#evme .cards img:last-of-type {
+  margin-bottom: 0;
+}
+
+#evme_mobile {
+  position: absolute;
+  bottom: 0;
+  left: 200px; 
+}
+
+#evme_mobile1 {
+  position: absolute;
+  top: 0;
+  left: 200px; 
+}
+
+#evme_firefoxos_mobile {
+  position: absolute;
+  top: 201px;
+  left: 122px; 
+}
+
+#firefox {
+  position: absolute;
+  top: 198px;
+  left: -59px;
+  box-shadow: none;
 }
 
 /* Mobile */
