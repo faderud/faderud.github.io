@@ -1,0 +1,184 @@
+/* reset */
+body, h1, h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+:root {
+  --primary: #079e92;
+  --secondary: #02786f;
+  --text-color: #494949;
+  --text-color-light: #9b9b9b;
+  --bg-color: #f0f2f2;
+}
+
+html {
+  background-color: var(--bg-color);
+}
+
+body {
+  font-family: effra, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 86px;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 36px;
+}
+
+small {
+  font-size: 18px;
+  color: var(--text-color-light);
+  font-weight: bold;
+}
+
+.text, .visual {
+  display: flex;
+  align-items: center;
+}
+
+#main {
+  flex: 1;
+  display: flex;
+  min-height: calc(100vh - 66px); /* leave room for nav */
+}
+
+#main .text {
+  flex-grow: 1;
+}
+
+#main::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
+  width: 100%;
+  height: 340px;
+  margin-top: -134px;
+}
+
+/* hide if screen narrow */
+@media all and (max-width: 1200px) {
+  #main::before {
+    display: none;
+  }
+}
+
+#main .text, #main .visual {
+  background: var(--bg-color); /* hides the background color strip */
+  z-index: 1;
+}
+
+#main h1 {
+  margin: 9px 0 19px;
+}
+
+#main h1 span {
+  color: var(--primary);
+  display: block;
+}
+
+#fade_portrait {
+  position: relative;
+  height: 478px;
+  width: 439px;
+}
+
+#fade_portrait img {
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+}
+
+#fade_portrait::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 340px;
+  width: 100%;
+  background-color: var(--primary);
+  border-top-left-radius: 170px;
+  border-bottom-left-radius: 170px;
+}
+
+nav {
+  height: 38px;
+  margin: 14px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+nav a {
+  background-color: white;
+  font-family: Effra;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 38px;
+  padding: 0 16px;
+  color: var(--text-color);
+  margin-left: 8px;
+  border-radius: 19px;
+  text-transform: uppercase;
+  transition: all 150ms linear;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+nav a:active {
+  background-color: var(--secondary);
+  color: white;
+}
+
+#scroll-indicator {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #c2c4c4;
+  line-height: 38px;
+}
+
+#scroll-indicator svg {
+  fill: var(--primary);
+  margin-right: 7px;
+  position: relative;
+  top: 1px;
+}
+
+/* Mobile */
+@media all and (max-width: 600px) {
+  body {
+    margin: 20px;
+  }
+  body, #main {
+    display: unset;
+  }
+  body, #main h1 {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+  }
+}
