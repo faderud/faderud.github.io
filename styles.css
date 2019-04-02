@@ -55,7 +55,7 @@ small {
 #main {
   flex: 1;
   display: flex;
-  min-height: calc(100vh - 66px); /* leave room for nav */
+  min-height: 100vh; /* leave room for nav */
 }
 
 #main .text {
@@ -70,7 +70,7 @@ small {
   background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
   width: 100%;
   height: 340px;
-  margin-top: -134px;
+  margin-top: -101px;
 }
 
 /* hide if screen narrow */
@@ -124,6 +124,7 @@ nav {
   position: relative;
   z-index: 1;
   display: flex;
+  display: none;
 }
 
 nav a {
