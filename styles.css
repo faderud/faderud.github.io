@@ -70,7 +70,7 @@ small {
   background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
   width: 100%;
   height: 340px;
-  margin-top: -101px;
+  margin-top: -142px;
 }
 
 /* hide if screen narrow */
@@ -86,7 +86,7 @@ small {
 }
 
 #main h1 {
-  margin: 9px 0 19px;
+  margin: 9px 0 19px -7px;
 }
 
 #main h1 span {
@@ -94,10 +94,15 @@ small {
   display: block;
 }
 
+#main h2 {
+  margin-left: -3px;
+}
+
 #fade_portrait {
   position: relative;
   height: 478px;
   width: 439px;
+  margin-top: -82px;
 }
 
 #fade_portrait img {
