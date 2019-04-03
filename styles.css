@@ -151,7 +151,7 @@ section .left {
 }
 
 /* hide if screen narrow */
-@media all and (max-width: 1200px) and (min-width: 600px) {
+@media all and (max-width: 1200px) {
   #main::before {
     display: none;
   }
@@ -389,12 +389,12 @@ footer .left, footer .right {
 
 /* Mobile */
 @media all and (max-width: 600px) {
-  /* html {
+  html {
     overflow-x: initial;
-  } */
+  }
 
   body {
-    margin: 10px 20px 28px;
+    margin: 10px 13px 28px;
   }
 
   h1 {
@@ -409,12 +409,16 @@ footer .left, footer .right {
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
-  section, .container, #footer-content {
+  section, .container {
     width: auto;
     display: initial;
+  }
+
+  #footer-content {
+    flex-direction: column-reverse;
   }
 
   .left, .right {
@@ -431,8 +435,10 @@ footer .left, footer .right {
     width: 170px;
   }
 
-  #main::before {
-    top: 500px;
+  #fade_portrait {
+    margin-top: -109px;
+    margin-right: -13px;
+    overflow: hidden;
   }
 
   #scroll-indicator {
