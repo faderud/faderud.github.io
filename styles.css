@@ -210,11 +210,13 @@ nav.stick {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  transition: none; /* no transition when unstuck, cuz u don't want the bg to scroll with the page */
 }
 
 nav.stuck {
   background-color: white;
   box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
+  transition: background-color 70ms ease-out;
 }
 
 nav .container {
