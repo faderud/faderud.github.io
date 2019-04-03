@@ -373,6 +373,7 @@ footer .left, footer .right {
 
 #twitter {
   background-color: #1da1f2;
+  text-indent: 1px;
 }
 
 #twitter:hover {
