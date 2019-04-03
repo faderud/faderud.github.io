@@ -25,11 +25,10 @@ html {
 
 body {
   font-family: effra, sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: var(--text-color);
   margin: 0 auto;
   font-weight: 300;
+  font-size: 20px;
 }
 
 h1 {
@@ -52,6 +51,7 @@ h3 {
   font-weight: normal;
   font-size: 36px;
   color: var(--heading);
+  line-height: normal;
 }
 
 h4 {
@@ -78,11 +78,6 @@ section:not(#main) {
   margin-top: 43px;
   padding-top: 116px; /* for anchor scroll top padding */
   margin-bottom: 159px;
-}
-
-p {
-  font-size: 20px;
-  line-height: 24px;
 }
 
 ul {
@@ -118,6 +113,7 @@ a.button:hover {
   background-color: var(--primary);
   color: white;
 }
+
 
 a.button:active {
   background-color: var(--secondary);
@@ -395,6 +391,7 @@ footer .left, footer .right {
 
   body {
     margin: 10px 13px 28px;
+    font-weight: 400;
   }
 
   h1 {
@@ -417,8 +414,18 @@ footer .left, footer .right {
     display: initial;
   }
 
+  nav .container {
+    display: flex;
+  }
+
   #footer-content {
     flex-direction: column-reverse;
+  }
+
+  /* disable hover due to https://github.com/faderud/faderud.github.io/issues/4#issuecomment-479386833 */
+  #footer-content a.button:hover {
+    background-color: transparent;
+    color: var(--heading);
   }
 
   .left, .right {
@@ -439,6 +446,7 @@ footer .left, footer .right {
     margin-top: -109px;
     margin-right: -13px;
     overflow: hidden;
+    flex: 1;
   }
 
   #scroll-indicator {
