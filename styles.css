@@ -19,8 +19,7 @@ a {
 
 html {
   background-color: var(--bg-color);
-  scroll-behavior: smooth;
-  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+  /* scroll-behavior: smooth; // no safari support yet */
 }
 
 body {
@@ -66,13 +65,17 @@ small {
   display: block;
 }
 
+#projects {
+  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+  min-width: 1200px;
+}
+
 .container, section {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
-
 
 section:not(#main) {
   margin-top: 43px;
@@ -142,7 +145,7 @@ section .left {
   background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
   width: 100%;
   height: 340px;
-  margin-top: -148px;
+  margin-top: -147px;
   transform: translateY(-33px);
 }
 
@@ -199,13 +202,19 @@ section .left {
 
 nav {
   height: 38px;
-  padding: 20px 0 54px;
-  position: sticky;
-  position: -webkit-sticky; /* for safari */
-  top: 0;
+  padding: 20px 0;
   z-index: 1;
-  background: url(img/sticky.png) repeat-x 0 0;
-  background-attachment: fixed;
+}
+
+nav.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+nav.stuck {
+  background-color: white;
+  box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
 }
 
 nav .container {
@@ -214,15 +223,17 @@ nav .container {
 }
 
 nav a[href="#"] {
-  overflow: hidden;
-  text-indent: -200px; /* hiding the actual text, showing bg instead */
-  background: url(img/fade.png) repeat-x center 30px;
-  background-size: auto 30px;
-  background-attachment: fixed;
-  width: 173px;
-  height: 38px;
   position: absolute;
   left: 0;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+  color: var(--heading);
+  line-height: 38px;
+}
+
+nav:not(.stuck) a[href="#"] {
+  display: none;
 }
 
 nav .button {
@@ -235,7 +246,7 @@ nav .button {
   font-size: 20px;
   line-height: 1.2;
   color: #c4c4c4;
-  margin-top: -85px;
+  margin-top: -51px;
 }
 
 #scroll-indicator svg {
@@ -386,10 +397,6 @@ footer .left, footer .right {
 
 /* Mobile */
 @media all and (max-width: 600px) {
-  html {
-    overflow-x: initial;
-  }
-
   body {
     margin: 10px 13px 28px;
     font-weight: 400;
@@ -408,6 +415,16 @@ footer .left, footer .right {
 
   h3 {
     font-size: 30px;
+  }
+
+  #projects {
+    overflow-x: initial;
+    min-width: 0;
+  }
+
+  nav.stuck {
+    background: transparent;
+    box-shadow: none;
   }
 
   section, .container {
