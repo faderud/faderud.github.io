@@ -388,6 +388,10 @@ body.scrolled #scroll-indicator svg {
   padding-top: 110px;
 }
 
+.no-shadow {
+  box-shadow: none !important;
+}
+
 footer {
   min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
   flex-direction: column;
@@ -479,7 +483,7 @@ footer .left, footer .right {
     box-shadow: none;
   }
 
-  section, .container {
+  section, .container, .project.with-extra-content > div {
     width: auto;
     display: initial;
   }
@@ -529,6 +533,10 @@ footer .left, footer .right {
     position: static !important;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
+  }
+
+  .project .button {
+    display: none;
   }
 
   nav {
