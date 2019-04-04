@@ -75,6 +75,7 @@ small {
 #projects {
   overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
   min-width: 1200px;
+  flex-direction: column;
 }
 
 .container, section {
@@ -123,7 +124,6 @@ a.button:hover {
   background-color: var(--primary);
   color: white;
 }
-
 
 a.button:active {
   background-color: var(--secondary);
@@ -296,9 +296,10 @@ body.scrolled #scroll-indicator svg {
   margin-top: 27px;
 }
 
-.project img {
+.project > .right img {
   box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
   margin-bottom: 40px;
+  vertical-align: bottom; /* removes unnecessary bottom margin */
 }
 
 .project small {
@@ -307,6 +308,23 @@ body.scrolled #scroll-indicator svg {
 
 .project .right {
   position: relative;
+}
+
+.project.with-extra-content {
+  flex-direction: column;
+}
+
+.project.with-extra-content > div {
+  display: flex;
+}
+
+.project .extra-content {
+  margin-top: 81px;
+}
+
+.project .extra-content .left {
+  display: flex;
+  align-items: center;
 }
 
 #neura {
