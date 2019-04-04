@@ -223,16 +223,21 @@ nav .container {
   justify-content: flex-end;
 }
 
-nav a[href="#"] {
+nav a[href="#"],
+nav #scroll-indicator {
   position: absolute;
   left: 0;
+  line-height: 38px;
+}
+
+nav a[href="#"] {
   font-size: 26px;
   font-weight: bold;
   letter-spacing: -0.3px;
   color: var(--heading);
-  line-height: 38px;
 }
 
+nav.stuck #scroll-indicator,
 nav:not(.stuck) a[href="#"] {
   display: none;
 }
@@ -244,10 +249,19 @@ nav .button {
 }
 
 #scroll-indicator {
-  font-size: 20px;
-  line-height: 1.2;
   color: #c4c4c4;
-  margin-top: -51px;
+  animation: hover 1s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+body.scrolled #scroll-indicator {
+  animation: none;
+}
+
+@keyframes hover {
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 #scroll-indicator svg {

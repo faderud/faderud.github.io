@@ -34,20 +34,17 @@
 
     <nav>
       <div class="container">
+        <span id="scroll-indicator">
+          <svg width="28px" height="16px" viewBox="0 0 28 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M14.1776391,12.6804789 L25.2931882,0.964999222 L27.4520755,3.04807519 L14.2531738,16.9593506 L12.0942865,14.8762746 L12.1128354,14.8567245 L0.170543167,3.34990019 L2.22837668,1.16693861 L14.1776391,12.6804789 Z"></path>
+          </svg>
+          Scroll to Begin
+        </span>
         <a href="#" onclick="smoothScroll(); return false;"><em>Fade</em> Rudnitsky</a>
         <a href="#product-design" onclick="smoothScroll('#product-design'); return false;" class="button">Product design</a>
         <a href="#lets-talk" onclick="smoothScroll('#lets-talk'); return false;" class="button">Let&rsquo;s talk</a>
       </div>
     </nav>
-
-    <div class="container">
-      <span id="scroll-indicator">
-        <svg width="28px" height="16px" viewBox="0 0 28 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path d="M14.1776391,12.6804789 L25.2931882,0.964999222 L27.4520755,3.04807519 L14.2531738,16.9593506 L12.0942865,14.8762746 L12.1128354,14.8567245 L0.170543167,3.34990019 L2.22837668,1.16693861 L14.1776391,12.6804789 Z"></path>
-        </svg>
-        Scroll to Begin
-      </span>
-    </div>
 
     <div id="projects">
       <section id="product-design">
@@ -158,5 +155,9 @@
     <script src="js/smoothscroll.min.js"></script>
     <script src="js/debounce-lodash.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      sticky('nav');
+      window.addEventListener('scroll', wasScrolled);
+    </script>
   </body>
 </html>
