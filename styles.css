@@ -250,20 +250,23 @@ nav .button {
 
 #scroll-indicator {
   color: #c4c4c4;
+}
+
+#scroll-indicator svg {
   animation: hover 1s infinite;
   animation-timing-function: ease-in-out;
 }
 
-body.scrolled #scroll-indicator {
+body.scrolled #scroll-indicator svg {
   animation: none;
 }
 
 @keyframes hover {
   0%, 100% {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
   }
   50% {
-    transform: translateY(2px);
+    transform: translateY(5px);
   }
 }
 
