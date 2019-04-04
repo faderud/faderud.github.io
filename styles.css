@@ -416,6 +416,11 @@ footer .left, footer .right {
   background-color: #0979bd;
 }
 
+#copyright {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
 /* Mobile */
 @media all and (max-width: 600px) {
   body {
