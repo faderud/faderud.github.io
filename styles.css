@@ -137,27 +137,7 @@ section .left {
   flex-grow: 1;
 }
 
-#main::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
-  width: 100%;
-  height: 340px;
-  margin-top: -147px;
-  transform: translateY(-33px);
-}
-
-/* hide if screen narrow */
-@media all and (max-width: 1200px) {
-  #main::before {
-    display: none;
-  }
-}
-
 #main .left, #main .right {
-  background: var(--bg-color); /* hides the background color strip */
   z-index: 1;
   display: flex;
   align-items: center;
@@ -177,9 +157,10 @@ section .left {
 
 #fade_portrait {
   position: relative;
-  height: 478px;
+  height: 477px;
   width: 439px;
   margin-top: -87px;
+  background: var(--bg-color); /* hides the background color strip */
 }
 
 #fade_portrait img {
@@ -198,6 +179,24 @@ section .left {
   background-color: var(--primary);
   border-top-left-radius: 170px;
   border-bottom-left-radius: 170px;
+}
+
+#main .right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 340px;
+  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
+  width: calc(100% - 340px); /* so it doesn't create a page overflow-x */
+  height: 340px;
+  margin-top: -181px;
+}
+
+/* hide if screen narrow */
+@media all and (max-width: 1200px) {
+  #main .right::before {
+    display: none;
+  }
 }
 
 nav {
