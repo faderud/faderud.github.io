@@ -1,5 +1,5 @@
 /* reset */
-body, h1, h2, h3, h4 {
+body, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
@@ -54,6 +54,13 @@ h3 {
 }
 
 h4 {
+  font-size: 46px;
+  line-height: 45px;
+  font-weight: normal;
+  color: var(--heading);
+}
+
+h5 {
   font-size: 18px;
   color: var(--text-light);
   font-weight: bold;
@@ -483,7 +490,7 @@ footer .left, footer .right {
     margin-left: -5px;
   }
 
-  #main h4 {
+  #main h5 {
     width: 170px;
   }
 
