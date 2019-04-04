@@ -237,7 +237,7 @@ nav a[href="#"] {
   color: var(--heading);
 }
 
-nav.stuck #scroll-indicator,
+nav.was-stuck #scroll-indicator,
 nav:not(.stuck) a[href="#"] {
   display: none;
 }
@@ -272,7 +272,7 @@ body.scrolled #scroll-indicator svg {
 
 #scroll-indicator svg {
   fill: var(--primary);
-  margin-right: 1px;
+  margin-right: 6px;
   position: relative;
   top: 1px;
 }

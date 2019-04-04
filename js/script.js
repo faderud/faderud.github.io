@@ -14,6 +14,10 @@ function sticky(selector) {
   function determineStuck() {
     var stuck = window.pageYOffset >= elTop;
     el.classList.toggle('stuck', stuck);
+
+    if (stuck) {
+      el.classList.add('was-stuck'); // persistent
+    }
   }
 
   window.onscroll = throttle(determineStuck, 100);
