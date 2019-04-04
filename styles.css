@@ -15,6 +15,9 @@ a {
   --text-color: #7e7e7e;
   --text-light: #9b9b9b;
   --bg-color: #f0f2f2;
+
+  --heading-item-count: 4;
+  --heading-anim-duration: 4.4s;
 }
 
 html {
@@ -153,10 +156,47 @@ section .left {
 
 #main h1 {
   margin: 9px 0 19px -7px;
+  position: relative;
 }
 
 #main h1 em {
-  display: block;
+  position: absolute;
+  top: 86px;
+  left: 0;
+  opacity: 0; 
+  animation-name: carousel;
+  animation-duration: calc(var(--heading-anim-duration) * var(--heading-item-count));
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+#main h1 em:nth-of-type(2){
+  animation-delay: var(--heading-anim-duration);
+}
+
+#main h1 em:nth-of-type(3){
+  animation-delay: calc(var(--heading-anim-duration) * 2);
+}
+
+#main h1 em:nth-of-type(4){
+  animation-delay: calc(var(--heading-anim-duration) *3);
+}
+
+
+@keyframes carousel {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  2%, 25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  27%, to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
 }
 
 #main h3 {
