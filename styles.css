@@ -528,6 +528,10 @@ footer .left, footer .right {
     display: initial;
   }
 
+  #main h1 em {
+    top: 48px;
+  }
+
   nav .container {
     display: flex;
   }
