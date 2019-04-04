@@ -47,17 +47,17 @@ h2 {
 }
 
 h3 {
-  font-weight: normal;
-  font-size: 36px;
-  color: var(--heading);
-  line-height: normal;
-}
-
-h4 {
   font-size: 46px;
   line-height: 45px;
   font-weight: normal;
   color: var(--heading);
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 36px;
+  color: var(--heading);
+  line-height: normal;
 }
 
 h5 {
