@@ -6,6 +6,7 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/fyu8lpp.css">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css"  media="screen and (max-width: 600px)">
 
     <meta property="og:title" content="Fade Rudnitsky">
     <meta property="og:description" content="I Create Human Experiences.">
@@ -39,13 +40,13 @@
 
     <nav>
       <div class="container">
-        <span id="scroll-indicator">
+        <span id="scroll-indicator" class="desktop-only">
           <svg width="28px" height="16px" viewBox="0 0 28 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M14.1776391,12.6804789 L25.2931882,0.964999222 L27.4520755,3.04807519 L14.2531738,16.9593506 L12.0942865,14.8762746 L12.1128354,14.8567245 L0.170543167,3.34990019 L2.22837668,1.16693861 L14.1776391,12.6804789 Z"></path>
           </svg>
           Scroll to Begin
         </span>
-        <a href="#" onclick="smoothScroll(); return false;"><em>Fade</em> Rudnitsky</a>
+        <a href="#" onclick="smoothScroll(); return false;" class="desktop-only"><em>Fade</em> Rudnitsky</a>
         <a href="#product-design" onclick="smoothScroll('#product-design'); return false;" class="button">Product design</a>
         <a href="#lets-talk" onclick="smoothScroll('#lets-talk'); return false;" class="button">Let&rsquo;s talk</a>
       </div>
@@ -94,7 +95,7 @@
           <h3>Helped Developers Personalize Their Products</h3>
           <h5>Product Manager and Designer<br />@ Neura</h5>
           <small>During 2015-2018</small>
-          <a href="https://www.theneura.com/" class="button">Visit</a>
+          <a href="https://www.theneura.com/" class="button desktop-only">Visit</a>
           <p>Created a developer journey from zero to successful integration across multiple platforms.</p>
           <p>Directly assisted customers in utilizing Neura&rsquo;s technology to create truly personal experiences.</p>
         </div>
@@ -111,7 +112,7 @@
             <h5>Head of Product Design<br />@ EverythingMe</h5>
             <small>During 2012-2015</small>
             <p>I led a team which created adaptive and immersive mobile experiences before Siri or Google Now even launched. Implemented in both Android and Mozilla FirefoxOS platforms.</p>
-            <p><span class="button">Project Shut Down in 2015</span></p>
+            <p><span class="button desktop-only">Project Shut Down in 2015</span></p>
           </div>
           <div class="right" id="evme">
             <img src="img/evme_mobile@2x.jpg" width="280" height="498" id="evme_mobile" />

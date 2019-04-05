@@ -1,0 +1,105 @@
+body {
+  margin: 10px 13px 28px;
+  font-weight: 400;
+}
+
+.desktop-only {
+  display: none;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 47px;
+}
+
+h2 {
+  font-size: 43px;
+  line-height: 48px;
+  padding-top: 83px !important;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+#projects {
+  overflow-x: initial;
+  min-width: 0;
+}
+
+nav.stuck {
+  background: transparent;
+  box-shadow: none;
+}
+
+section, .container, .project.with-extra-content > div {
+  width: auto;
+  display: initial;
+}
+
+#main h1 em {
+  --anim-translate-x: 10px; /* https://bit.ly/2uP3qeS */
+  top: 48px;
+}
+
+nav .container {
+  display: flex;
+}
+
+#footer-content {
+  flex-direction: column-reverse;
+}
+
+/* https://bit.ly/2G21mGF */
+#footer-content a.button:hover {
+  background-color: transparent;
+  color: var(--heading);
+}
+
+.left, .right {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#main h1 {
+  margin-left: -5px;
+}
+
+#main h5 {
+  width: 170px;
+}
+
+#fade_portrait {
+  margin-top: -109px;
+  margin-right: -13px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.project img {
+  width: 100% !important;
+  height: auto !important;
+  position: static !important;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+/* disable nav bg */
+nav {
+  background: none;
+  padding-bottom: 0;
+}
+
+nav .button {
+  margin-left: 0;
+  margin-right: 7px;
+  font-size: 16px;
+  line-height: 31px;
+  padding: 0 10px;
+  border-radius: 15px;
+}
+
+nav .button:last-of-type {
+  margin-right: 0;
+}
