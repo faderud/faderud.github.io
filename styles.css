@@ -161,7 +161,7 @@ section .left {
 
 #main h1 em {
   --item-count: 4;
-  --anim-duration: 4.4s;
+  --anim-duration: 2.4s;
   --anim-translate-x: 20px;
   position: absolute;
   top: 86px;
