@@ -49,7 +49,7 @@ h2 {
 h3 {
   font-size: 46px;
   line-height: 45px;
-  font-weight: normal;
+  font-weight: 500;
   color: var(--heading);
 }
 
@@ -91,15 +91,18 @@ section:not(#main) {
   margin-bottom: 159px;
 }
 
+#project section:last-of-type {
+  margin-bottom: 0 !important;
+}
+
 ul {
   padding: 0;
   list-style: none;
 }
 
 li {
-  padding-left: 32px;
-  background: url('img/list-item.svg') left center no-repeat;
-  line-height: 37px;
+  background: url('img/list-item.svg') left 6px no-repeat;
+  padding: 7px 0 6px 32px;
 }
 
 em {
@@ -340,6 +343,7 @@ body.scrolled #scroll-indicator svg {
   top: 1px;
 }
 
+
 .project .left {
   width: 335px;
   padding-right: 76px;
@@ -380,6 +384,10 @@ body.scrolled #scroll-indicator svg {
 .project .extra-content .left {
   display: flex;
   align-items: center;
+}
+
+#product-design .right h4 {
+  width: 360px;
 }
 
 #neura {
