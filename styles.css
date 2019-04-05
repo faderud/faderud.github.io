@@ -163,12 +163,16 @@ section .left {
   position: absolute;
   top: 86px;
   left: 0;
-  opacity: 0; 
+  opacity: 0;
   animation-name: carousel;
   animation-duration: calc(var(--anim-duration) * var(--item-count));
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+}
+
+#main h1 em:nth-of-type(1){
+  animation-name: carousel, start-static;
+  animation-iteration-count: infinite, 1;
 }
 
 #main h1 em:nth-of-type(2){
@@ -190,6 +194,17 @@ section .left {
     transform: translateX(calc(var(--anim-translate-x) * -1));
   }
   2%, 25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  27%, to {
+    opacity: 0;
+    transform: translateX(var(--anim-translate-x));
+  }
+}
+
+@keyframes start-static {
+  from, 25% {
     opacity: 1;
     transform: translateX(0);
   }
