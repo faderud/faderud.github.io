@@ -1,10 +1,10 @@
 body {
-  margin: 10px 13px 28px;
+  margin: 10px 0 28px;
   font-weight: 400;
 }
 
 .desktop-only {
-  display: none;
+  display: none !important; /* TODO: get rid of 2 last non-mobile images cuz they're still requested from server */
 }
 
 h1 {
@@ -47,7 +47,7 @@ nav .container {
 }
 
 #footer-content {
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 /* https://bit.ly/2G21mGF */
@@ -59,6 +59,13 @@ nav .container {
 .left, .right {
   width: auto !important;
   margin: 0 !important;
+}
+
+.left {
+  padding: 0 43px !important;
+}
+
+.right {
   padding: 0 !important;
 }
 
@@ -81,8 +88,30 @@ nav .container {
   width: 100% !important;
   height: auto !important;
   position: static !important;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.08);
-  margin-bottom: 20px;
+  box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.08) !important;
+  display: block;
+  margin: 0 auto 20px !important;
+}
+
+.project img.mobile-w60 {
+  width: 60% !important;
+}
+
+#evme .cards {
+  padding: 20px 43px 0;
+}
+
+#evme .cards img:not(.mobile-card-wide) {
+  width: 90% !important;
+}
+
+img.no-shadow,
+img.mobile-no-shadow {
+  box-shadow: none !important;
+}
+
+.right.mobile-p43 {
+  padding: 0 43px !important;
 }
 
 /* disable nav bg */

@@ -351,7 +351,7 @@ body.scrolled #scroll-indicator svg {
   margin-top: 27px;
 }
 
-.project > .right img {
+.project .right img {
   box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
   margin-bottom: 40px;
   vertical-align: bottom; /* removes unnecessary bottom margin */
@@ -410,7 +410,7 @@ body.scrolled #scroll-indicator svg {
   border-radius: 3px;
 }
 
-#evme .cards img:last-of-type {
+#evme .cards picture:last-of-type img {
   margin-bottom: 0;
 }
 
