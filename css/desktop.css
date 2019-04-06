@@ -203,7 +203,6 @@ nav:not(.stuck) a[href="#"] {
   position: absolute;
   top: 198px;
   left: -59px;
-  box-shadow: none;
 }
 
 #lets-talk {

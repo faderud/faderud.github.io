@@ -142,12 +142,20 @@
             <span class="button">Project Shut Down in 2015</span>
           </div>
           <div class="right" id="evme">
-            <img src="img/evme_mobile1@2x.jpg" width="280" height="433" id="evme_mobile1" class="desktop-only" />
+            <picture>
+              <source media="(min-width: 600px)" srcset="img/evme_mobile1@2x.jpg">
+              <img src="" width="280" height="433" id="evme_mobile1" class="desktop-only" />
+            </picture>
+            
             <picture>
               <source media="(max-width: 600px)" srcset="img/mobile/evme_firefoxos_mobile.png 1x, img/mobile/evme_firefoxos_mobile@2x.png 2x, img/mobile/evme_firefoxos_mobile@3x.png 3x">
               <img src="img/evme_firefoxos_mobile@2x.jpg" width="229" height="404" id="evme_firefoxos_mobile" class="mobile-no-shadow" />
             </picture>
-            <img src="img/firefox@2x.png" width="441" height="442" id="firefox" class="desktop-only" />
+
+            <picture>
+              <source media="(min-width: 600px)" srcset="img/firefox@2x.png">
+              <img src="" width="441" height="442" id="firefox" class="desktop-only no-shadow" />
+            </picture>
             
             <picture>
               <source media="(max-width: 600px)" srcset="img/mobile/evme_mobile_mobile.jpg 1x, img/mobile/evme_mobile_mobile@2x.jpg 2x, img/mobile/evme_mobile_mobile@3x.jpg 3x">
