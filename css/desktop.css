@@ -29,10 +29,9 @@ h4 {
   display: flex;
 }
 
-section:not(#main) {
-  margin-top: 43px;
-  padding-top: 116px; /* for anchor scroll top padding */
-  margin-bottom: 159px;
+section:not(#main), #lets-talk {
+  margin-top: 35px;
+  padding-top: 115px; /* for anchor scroll top padding */
 }
 
 section .left {
@@ -108,6 +107,7 @@ nav:not(.stuck) a[href="#"] {
   overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
   min-width: 1200px;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .project .left {
@@ -127,7 +127,15 @@ nav:not(.stuck) a[href="#"] {
 }
 
 .project small {
-  margin-bottom: 32px;
+  margin: 5px 0 27px;
+}
+
+.project small + .button {
+  margin-bottom: 4px;
+}
+
+.project p + .button {
+  margin-top: 13px;
 }
 
 .project .right {
@@ -199,7 +207,7 @@ nav:not(.stuck) a[href="#"] {
 }
 
 #lets-talk {
-  padding-top: 110px;
+  margin-bottom: 50px;
 }
 
 footer {
@@ -213,5 +221,11 @@ footer {
 }
 
 footer .left, footer .right {
-  width: 579px; 
+  width: 549px;
+  margin-right: 22px;
+}
+
+#copyright {
+  display: block;
+  margin-top: 18px;
 }

@@ -16,21 +16,39 @@ h1 {
 h2 {
   font-size: 35px;
   line-height: 37px;
-  padding-top: 70px;
+  padding-top: 40px;
 }
 
 h3 {
   font-size: 28px;
   line-height: 30px;
+  margin-bottom: 21px;
 }
 
 h4 {
   font-size: 23px;
   letter-spacing: -0.3px;
+  margin-top: 29px;
+}
+
+h5 {
+  margin-bottom: 12px;
+}
+
+small {
+  margin-bottom: 4px;
+}
+
+ul {
+  margin: 10px 0 0;
 }
 
 section:not(#main) {
   margin-bottom: 70px;
+}
+
+nav {
+  padding: 30px 0;
 }
 
 nav .button {
@@ -88,8 +106,20 @@ nav a[href="#"] {
   margin: 0 auto 20px;
 }
 
+.project picture:first-of-type img {
+  margin-top: 40px;
+}
+
 .project img.mobile-w60 {
   width: 60% !important;
+}
+
+.project .extra-content {
+  margin-top: 40px;
+}
+
+.project .left .button {
+  display: none;
 }
 
 #fade_portrait {
@@ -118,11 +148,10 @@ nav a[href="#"] {
   width: 90% !important;
 }
 
-
 #footer-content {
   flex-direction: column;
   position: relative;
-  padding-bottom: 37px;
+  padding-bottom: 58px;
 }
 
 /* https://bit.ly/2G21mGF */
@@ -131,12 +160,30 @@ nav a[href="#"] {
   color: var(--heading);
 }
 
+footer .button {
+  display: block;
+  text-align: center;
+}
+
 /* push copyright to the bottom */
 #copyright {
   position: absolute;
-  bottom: -13px;
+  bottom: 1px;
 }
 
 img.mobile-no-shadow {
   box-shadow: none !important;
+}
+
+#lets-talk {
+  padding-top: 80px;
+  margin-bottom: -30px;
+}
+
+footer h4 {
+  margin: 40px 0 4px;
+}
+
+#social {
+  margin-top: 40px;
 }

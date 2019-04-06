@@ -41,6 +41,7 @@ h2 {
 h4 {
   font-weight: normal;
   color: var(--heading);
+  letter-spacing: -0.4px;
 }
 
 h5 {
@@ -58,16 +59,22 @@ small {
 ul {
   padding: 0;
   list-style: none;
+  margin: 26px 0;
 }
 
 li {
   background: url('../img/list-item.svg') left 6px no-repeat;
   padding: 7px 0 6px 32px;
+  margin-bottom: 5px;
 }
 
 em {
   color: var(--primary);
   font-style: normal;
+}
+
+p {
+  margin: 12px 0;
 }
 
 .button {
@@ -268,8 +275,8 @@ body.scrolled #scroll-indicator svg {
   border-radius: 3px;
 }
 
-#evme .cards picture:last-of-type img {
-  margin-bottom: 0;
+picture:last-of-type img {
+  margin-bottom: 0 !important;
 }
 
 .no-shadow {
@@ -319,4 +326,8 @@ body.scrolled #scroll-indicator svg {
 #copyright {
   color: var(--text-light);
   font-size: 14px;
+}
+
+#footer-content .button {
+  margin-top: 21px;
 }
