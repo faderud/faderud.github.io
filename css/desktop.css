@@ -1,0 +1,230 @@
+
+body {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 86px;
+  letter-spacing: -0.4px;
+}
+
+h2 {
+  font-size: 70px;
+  line-height: 66px;
+  margin-bottom: 29px;
+}
+
+h3 {
+  font-size: 46px;
+  line-height: 45px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+.container, section {
+  width: 1200px;
+  display: flex;
+}
+
+section:not(#main), #lets-talk {
+  margin-top: 35px;
+  padding-top: 115px; /* for anchor scroll top padding */
+}
+
+section .left {
+  width: 579px;
+  padding-right: 124px;
+}
+
+nav.stuck {
+  background-color: white;
+  box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
+  transition: background-color 70ms ease-out;
+}
+
+nav .button {
+  background-color: white;
+  margin-left: 8px;
+  border: 0;
+}
+
+nav .container {
+  position: relative;
+  justify-content: flex-end;
+}
+
+nav a[href="#"],
+nav #scroll-indicator {
+  position: absolute;
+  left: 0;
+  line-height: 38px;
+}
+
+nav.was-stuck #scroll-indicator,
+nav:not(.stuck) a[href="#"] {
+  display: none;
+}
+
+#main {
+  flex: 1;
+  min-height: calc(100vh - 72px); /* leave room for nav */
+}
+
+#main .left {
+  flex-grow: 1;
+  z-index: 1;
+  position: relative;
+}
+
+#main .left, #main .right {
+  display: flex;
+  align-items: center;
+}
+
+#main h1 {
+  margin-left: -7px;
+}
+
+/* hide if screen narrow */
+@media all and (max-width: 1200px) {
+  #main .right::before {
+    display: none;
+  }
+}
+
+#fade_portrait {
+  margin-top: -87px;
+}
+
+#product-design .right h4 {
+  width: 360px;
+}
+
+#projects {
+  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+  min-width: 1200px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.project .left {
+  width: 335px;
+  padding-right: 76px;
+  flex-shrink: 0;
+}
+
+.project h3{
+  margin-bottom: 29px;
+  margin-top: 27px;
+}
+
+.project .right img {
+  box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.project small {
+  margin: 5px 0 27px;
+}
+
+.project small + .button {
+  margin-bottom: 4px;
+}
+
+.project p + .button {
+  margin-top: 13px;
+}
+
+.project .right {
+  position: relative;
+}
+
+.project.with-extra-content {
+  flex-direction: column;
+}
+
+.project.with-extra-content > div {
+  display: flex;
+}
+
+.project .extra-content {
+  margin-top: 81px;
+}
+
+.project .extra-content .left {
+  display: flex;
+  align-items: center;
+}
+
+#evme img {
+  margin: 0;
+}
+
+#evme .cards {
+  padding-top: 50px;
+}
+
+#neura {
+  margin-left: 100px;
+}
+
+#neura-mobile {
+  position: absolute;
+  left: -100px;
+  bottom: -70px;
+}
+
+#evme {
+  padding-left: 550px;
+}
+
+#evme_mobile {
+  position: absolute;
+  bottom: 0;
+  left: 200px; 
+}
+
+#evme_mobile1 {
+  position: absolute;
+  top: 0;
+  left: 200px; 
+}
+
+#evme_firefoxos_mobile {
+  position: absolute;
+  top: 201px;
+  left: 122px; 
+}
+
+#firefox {
+  position: absolute;
+  top: 198px;
+  left: -59px;
+}
+
+#lets-talk {
+  margin-bottom: 50px;
+}
+
+footer {
+  min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
+  flex-direction: column;
+}
+
+#footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .left, footer .right {
+  width: 549px;
+  margin-right: 22px;
+}
+
+#copyright {
+  display: block;
+  margin-top: 18px;
+}

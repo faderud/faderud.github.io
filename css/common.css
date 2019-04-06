@@ -1,0 +1,333 @@
+/* reset */
+body, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary: #079e92;
+  --secondary: #02786f;
+  --heading: #494949;
+  --text-color: #7e7e7e;
+  --text-light: #9b9b9b;
+  --bg-color: #f0f2f2;
+}
+
+html {
+  background-color: var(--bg-color);
+  /* scroll-behavior: smooth; // no safari support yet */
+}
+
+body {
+  font-family: effra, sans-serif;
+  color: var(--text-color);
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+h1, h3 {
+  font-weight: 500;
+  color: var(--heading);
+}
+
+h2 {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+h4 {
+  font-weight: normal;
+  color: var(--heading);
+  letter-spacing: -0.4px;
+}
+
+h5 {
+  font-size: 18px;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+small {
+  font-size: 18px;
+  color: var(--text-light);
+  display: block;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 26px 0;
+}
+
+li {
+  background: url('../img/list-item.svg') left 6px no-repeat;
+  padding: 7px 0 6px 32px;
+  margin-bottom: 5px;
+}
+
+em {
+  color: var(--primary);
+  font-style: normal;
+}
+
+p {
+  margin: 12px 0;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 38px;
+  padding: 0 16px;
+  color: var(--heading);
+  border-radius: 19px;
+  text-transform: uppercase;
+  border: solid 1px var(--primary);
+  transition: color 150ms linear, background-color 150ms linear;
+  display: inline-block;
+}
+
+a.button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+a.button:active {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.container, section {
+  margin: 0 auto;
+}
+
+nav {
+  height: 38px;
+  padding: 20px 0;
+  z-index: 1;
+}
+
+nav.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: none; /* no transition when unstuck, cuz u don't want the bg to scroll with the page */
+}
+
+nav a[href="#"] {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+  color: var(--heading);
+}
+
+nav .button {
+  background-color: white;
+  border: 0;
+}
+
+#scroll-indicator {
+  color: #c4c4c4;
+}
+
+/* the arrow */
+#scroll-indicator svg {
+  fill: var(--primary);
+  margin-right: 6px;
+  position: relative;
+  top: 1px;
+  animation: hover 1s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* stop arrow animation when scrolled */
+body.scrolled #scroll-indicator svg {
+  animation: none;
+}
+
+/* arrow animation */
+@keyframes hover {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+#main h1 {
+  margin: 9px 0 19px;
+  position: relative;
+}
+
+#main h1 em {
+  --item-count: 4;
+  --anim-duration: 2.4s;
+  --anim-translate-x: 20px;
+  position: absolute;
+  top: 86px;
+  left: 0;
+  opacity: 0;
+  animation-name: carousel;
+  animation-duration: calc(var(--anim-duration) * var(--item-count));
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#main h1 em:nth-of-type(1){
+  animation-name: carousel, start-static;
+  animation-iteration-count: infinite, 1;
+}
+
+#main h1 em:nth-of-type(2){
+  animation-delay: var(--anim-duration);
+}
+
+#main h1 em:nth-of-type(3){
+  animation-delay: calc(var(--anim-duration) * 2);
+}
+
+#main h1 em:nth-of-type(4){
+  animation-delay: calc(var(--anim-duration) *3);
+}
+
+@keyframes carousel {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--anim-translate-x) * -1));
+  }
+  2%, 25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  27%, to {
+    opacity: 0;
+    transform: translateX(var(--anim-translate-x));
+  }
+}
+
+@keyframes start-static {
+  from, 25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  27%, to {
+    opacity: 0;
+    transform: translateX(var(--anim-translate-x));
+  }
+}
+
+/* infinite green strip */
+#main .right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 340px;
+  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
+  width: calc(100% - 340px); /* so it doesn't create a page overflow-x */
+  height: 340px;
+  margin-top: -181px;
+}
+
+#fade_portrait {
+  position: relative;
+  height: 477px;
+  width: 439px;
+  background: var(--bg-color); /* hides the background color strip */
+}
+
+#fade_portrait img {
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+}
+
+#fade_portrait::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 340px;
+  width: 100%;
+  background-color: var(--primary);
+  border-top-left-radius: 170px;
+  border-bottom-left-radius: 170px;
+}
+
+#projects {
+  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+}
+
+#projects section:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.project .right img {
+  vertical-align: bottom; /* removes unnecessary bottom margin */
+}
+
+#evme .cards img {
+  margin: 0 auto 16px;
+  display: block;
+  border-radius: 3px;
+}
+
+picture:last-of-type img {
+  margin-bottom: 0 !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+#social {
+  margin-top: 36px;
+}
+
+#linkedin, #twitter {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-right: 4px;
+  overflow: hidden;
+  border-radius: 50%;
+  line-height: 46px;
+}
+
+#linkedin {
+  background-color: #0071a1;
+}
+
+#linkedin:hover {
+  background-color: #1a96cb;
+}
+
+#linkedin:active {
+  background-color: #00567b;
+}
+
+#twitter {
+  background-color: #1da1f2;
+  text-indent: 1px;
+}
+
+#twitter:hover {
+  background-color: #50bcff;
+}
+
+#twitter:active {
+  background-color: #0979bd;
+}
+
+#copyright {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+#footer-content .button {
+  margin-top: 21px;
+}

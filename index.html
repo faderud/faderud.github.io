@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fade Rudnitsky</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://use.typekit.net/fyu8lpp.css">
-    <link rel="stylesheet" href="styles.css" />
+    <title>Fade Rudnitsky - I Create Human Experiences.</title>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    
+    <!-- seo -->
+    <meta name="description" content="Fade Rudnitsky's website. I Create Human Experiences.">
+    <meta name="keywords" content="Product Design, Web Design, Capiens">
+
+    <!-- webclip and favicon -->
+    <link rel="apple-touch-icon" href="img/webclip.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- open graph -->
     <meta property="og:title" content="Fade Rudnitsky">
     <meta property="og:description" content="I Create Human Experiences.">
     <meta property="og:image" content="https://faderud.com/img/social_meta_image.jpg">
@@ -14,31 +23,272 @@
     <meta name="twitter:description" content="I Create Human Experiences.">
     <meta name="twitter:image" content="https://faderud.com/img/social_meta_image.jpg">
     <meta name="twitter:card" content="summary_large_image">
+
+    <!-- css and fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/fyu8lpp.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 600px)" />
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 600px)" />
   </head>
   <body>
     <section id="main">
-      <div class="text">
+      <div class="left">
         <div>
-          <h2>Hey There!<br />I'm Fade Rudnitsky</h2>
-          <h1>I Create <span>Human</span> Experiences.</h1>
-          <small>Coming really soon!</small>
+          <h4>Hey There!<br />I&rsquo;m Fade Rudnitsky</h4>
+          <h1>
+            I Create
+            <em>Human</em> <em>Authentic</em> <em>Trustworthy</em> <em>Sensitive</em>
+            <br /><br />
+            Experiences.
+          </h1>
+          <h5>Based in Tel-Aviv, but it&rsquo;s 2019</h5>
         </div>
       </div>
-      <div class="visual">
+      <div class="right">
         <div id="fade_portrait">
-          <img src="img/fade_portrait@2x.png" alt="Fade Rudnitsky Smiling" width="448" height="427" />
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/mobile/fade_portrait_mobile.png 1x, img/mobile/fade_portrait_mobile@2x.png 2x, img/mobile/fade_portrait_mobile@3x.png 3x">
+            <img src="img/fade_portrait@2x.png" alt="Fade Rudnitsky Smiling" width="448" height="427" />
+          </picture>
         </div>
       </div>
     </section>
+
     <nav>
-      <span id="scroll-indicator">
-        <svg width="28px" height="16px" viewBox="0 0 28 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path d="M14.1776391,12.6804789 L25.2931882,0.964999222 L27.4520755,3.04807519 L14.2531738,16.9593506 L12.0942865,14.8762746 L12.1128354,14.8567245 L0.170543167,3.34990019 L2.22837668,1.16693861 L14.1776391,12.6804789 Z"></path>
-        </svg>
-        Scroll to Begin
-      </span>
-      <a href="#">Product design</a>
-      <a href="#">Let's talk</a>
+      <div class="container">
+        <span id="scroll-indicator">
+          <svg width="28px" height="16px" viewBox="0 0 28 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M14.1776391,12.6804789 L25.2931882,0.964999222 L27.4520755,3.04807519 L14.2531738,16.9593506 L12.0942865,14.8762746 L12.1128354,14.8567245 L0.170543167,3.34990019 L2.22837668,1.16693861 L14.1776391,12.6804789 Z"></path>
+          </svg>
+          Scroll to Begin
+        </span>
+        <a href="#" onclick="smoothScroll(); return false;"><em>Fade</em> Rudnitsky</a>
+        <a href="#product-design" onclick="smoothScroll('#product-design'); return false;" class="button">Product design</a>
+        <a href="#lets-talk" onclick="smoothScroll('#lets-talk'); return false;" class="button">Let&rsquo;s talk</a>
+      </div>
     </nav>
+
+    <div id="projects">
+      <section id="product-design">
+        <div class="left">
+          <h2>Product Design and Architecture Since 2004</h2>
+          <p>
+              I make valuable products for humans, from the highest strategic levels through detailed design down to micro-copy of the very last of your error messages.
+              <br /><br />
+              I believe that a truly human experience amplifies your product&rsquo;s value and grows your business in the long term.
+          </p>
+        </div>
+        <div class="right text-only">
+          <h4>Skillset built by over 15 years of experience</h4>
+          <ul>
+            <li>Product Architecture</li>
+            <li>Web, Mobile and Print Design</li>
+            <li>Branding</li>
+            <li>Messaging and Micro-Copywriting</li>
+            <li>Music</li>
+            <li>Company Culture</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="left">
+          <h3>I Allowed Products to Respond to Their Users</h3>
+          <h5>Product Manager and Designer<br />@ Neura</h5>
+          <small>During 2015-2018</small>
+          <p>Neura is AI as a service, which allows products to securely respond to who their users are and what they do.</p>
+          <p>I&rsquo;ve done Product planning, definition and execution, coordinated with R&D and customers. Hands-on + management of external product design teams.</p>
+        </div>
+        <div class="right" id="neura">
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/mobile/neura_web_mobile.jpg 1x, img/mobile/neura_web_mobile@2x.jpg 2x, img/mobile/neura_web_mobile@3x.jpg 3x">
+            <img src="img/neura_web@2x.jpg" width="966" height="636" />
+          </picture>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/mobile/neura_mobile_mobile.jpg 1x, img/mobile/neura_mobile_mobile@2x.jpg 2x, img/mobile/neura_mobile_mobile@3x.jpg 3x">
+            <img src="img/neura_mobile@2x.jpg" id="neura-mobile" class="mobile-w60" width="280" height="501" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="left">
+          <h3>Helped Developers Personalize Their Products</h3>
+          <h5>Product Manager and Designer<br />@ Neura</h5>
+          <small>During 2015-2018</small>
+          <a href="https://www.theneura.com/" class="button">Visit</a>
+          <p>Created a developer journey from zero to successful integration across multiple platforms.</p>
+          <p>Directly assisted customers in utilizing Neura&rsquo;s technology to create truly personal experiences.</p>
+        </div>
+        <div class="right">
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/mobile/neura_dev_web1_mobile.jpg 1x, img/mobile/neura_dev_web1_mobile@2x.jpg 2x, img/mobile/neura_dev_web1_mobile@3x.jpg 3x">
+            <img src="img/neura_dev_web1@2x.jpg" width="960" height="573" />
+          </picture>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/mobile/neura_dev_web2_mobile.jpg 1x, img/mobile/neura_dev_web2_mobile@2x.jpg 2x, img/mobile/neura_dev_web2_mobile@3x.jpg 3x">
+            <img src="img/neura_dev_web2@2x.jpg" width="960" height="735" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="project with-extra-content">
+        <div>
+          <div class="left">
+            <h3>Worked On the First Contextual Phone</h3>
+            <h5>Head of Product Design<br />@ EverythingMe</h5>
+            <small>During 2012-2015</small>
+            <p>I led a team which created adaptive and immersive mobile experiences before Siri or Google Now even launched. Implemented in both Android and Mozilla FirefoxOS platforms.</p>
+            <span class="button">Project Shut Down in 2015</span>
+          </div>
+          <div class="right" id="evme">
+            <picture>
+              <source media="(min-width: 600px)" srcset="img/evme_mobile1@2x.jpg">
+              <img src="" width="280" height="433" id="evme_mobile1" class="desktop-only" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/evme_firefoxos_mobile.png 1x, img/mobile/evme_firefoxos_mobile@2x.png 2x, img/mobile/evme_firefoxos_mobile@3x.png 3x">
+              <img src="img/evme_firefoxos_mobile@2x.jpg" width="229" height="404" id="evme_firefoxos_mobile" class="mobile-no-shadow" />
+            </picture>
+
+            <picture>
+              <source media="(min-width: 600px)" srcset="img/firefox@2x.png">
+              <img src="" width="441" height="442" id="firefox" class="desktop-only no-shadow" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/evme_mobile_mobile.jpg 1x, img/mobile/evme_mobile_mobile@2x.jpg 2x, img/mobile/evme_mobile_mobile@3x.jpg 3x">
+              <img src="img/evme_mobile@2x.jpg" width="280" height="498" id="evme_mobile" class="mobile-w60" />
+            </picture>
+            
+            <div class="cards">
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/mobile/evme_card1_mobile.jpg 1x, img/mobile/evme_card1_mobile@2x.jpg 2x, img/mobile/evme_card1_mobile@3x.jpg 3x">
+                <img src="img/evme_card1@2x.jpg" width="267" height="245" />
+              </picture>
+
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/mobile/evme_card2_mobile.jpg 1x, img/mobile/evme_card2_mobile@2x.jpg 2x, img/mobile/evme_card2_mobile@3x.jpg 3x">
+                <img src="img/evme_card2@2x.jpg" width="297" height="193" class="mobile-card-wide" />
+              </picture>
+
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/mobile/evme_card3_mobile.jpg 1x, img/mobile/evme_card3_mobile@2x.jpg 2x, img/mobile/evme_card3_mobile@3x.jpg 3x">
+                <img src="img/evme_card3@2x.jpg" width="267" height="141" />
+              </picture>
+
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/mobile/evme_card4_mobile.jpg 1x, img/mobile/evme_card4_mobile@2x.jpg 2x, img/mobile/evme_card4_mobile@3x.jpg 3x">
+                <img src="img/evme_card4@2x.jpg" width="267" height="237" />
+              </picture>
+
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/mobile/evme_card5_mobile.jpg 1x, img/mobile/evme_card5_mobile@2x.jpg 2x, img/mobile/evme_card5_mobile@3x.jpg 3x">
+                <img src="img/evme_card5@2x.jpg" width="267" height="245" />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="extra-content">
+          <div class="left">
+            <p>Flexible branding system, built to change according to world events&rsquo; context</p>
+          </div>
+          <div class="right mobile-w290">
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/evme_logo_mobile.png 1x, img/mobile/evme_logo_mobile@2x.png 2x, img/mobile/evme_logo_mobile@3x.png 3x">
+              <img src="img/evme_logo@2x.png" width="780" height="155" class="no-shadow" />
+            </picture>
+          </div>
+        </div>
+        <div class="extra-content">
+          <div class="left">
+            <p>Branded stationary, contextual to its owner</p>
+          </div>
+          <div class="right">
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/evme_businesscard_mobile.png 1x, img/mobile/evme_businesscard_mobile@2x.png 2x, img/mobile/evme_businesscard_mobile@3x.png 3x">
+              <img src="img/evme_businesscard@2x.png" width="855" height="498" class="no-shadow" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+          <div class="left">
+            <h3>Created Countless Human Experiences</h3>
+            <h5>Designer and Head of Design @ Multiple Leading Agencies + Freelancer</h5>
+            <small>During 2004-2012</small>
+          </div>
+          <div class="right">
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/other_web1_mobile.jpg 1x, img/mobile/other_web1_mobile@2x.jpg 2x, img/mobile/other_web1_mobile@3x.jpg 3x">
+              <img src="img/other_web1@2x.jpg" width="960" height="541" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/other_web2_mobile.jpg 1x, img/mobile/other_web2_mobile@2x.jpg 2x, img/mobile/other_web2_mobile@3x.jpg 3x">
+              <img src="img/other_web2@2x.jpg" width="960" height="539" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/other_web3_mobile.jpg 1x, img/mobile/other_web3_mobile@2x.jpg 2x, img/mobile/other_web3_mobile@3x.jpg 3x">
+              <img src="img/other_web3@2x.jpg" width="960" height="656" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/other_web4_mobile.jpg 1x, img/mobile/other_web4_mobile@2x.jpg 2x, img/mobile/other_web4_mobile@3x.jpg 3x">
+              <img src="img/other_web4@2x.jpg" width="960" height="540" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/other_web5_mobile.jpg 1x, img/mobile/other_web5_mobile@2x.jpg 2x, img/mobile/other_web5_mobile@3x.jpg 3x">
+              <img src="img/other_web5@2x.jpg" width="960" height="580" />
+            </picture>
+            
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/mobile/other_web6_mobile.jpg 1x, img/mobile/other_web6_mobile@2x.jpg 2x, img/mobile/other_web6_mobile@3x.jpg 3x">
+              <img src="img/other_web6@2x.jpg" width="960" height="670" />
+            </picture>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="container">
+      <h2 id="lets-talk">Let&rsquo;s Talk</h2>
+      <div id="footer-content">
+        <div class="left">
+          <h4>Shoot Me an Email</h4>
+          <p>It&rsquo;s the best way to have my attention. It might take me up to 48 hours to get to your email, but I&rsquo;ll be fully mindful to it when I do.</p>
+          <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website" class="button">Email Me</a>
+          <h4 id="social">Social Maybe?</h4>
+          <p>
+            <a href="https://www.linkedin.com/in/faderudnitsky/" id="linkedin">
+              <img src="img/linkedin.svg" alt="Fade Rudnitsky on Linkedin" />
+            </a>
+            <a href="https://twitter.com/FadeRud" id="twitter">
+              <img src="img/twitter.svg" alt="Fade Rudnitsky on Twitter" />
+            </a>
+          </p>
+          <span id="copyright">&copy; Fade Rudnitsky 2019. All Rights Reserved.</span>
+        </div>
+        <div class="right">
+          <h4>Let&rsquo;s Have Lunch</h3>
+          <p>We&rsquo;re both humans, and we both have to eat, right? I reserve my lunch time on weekdays to meet interesting people.</p>
+          <p>Whether you&rsquo;re a customer, an investor, a designer, a unicorn or simply an interesting human being - you have 60 minutes of my time to brainstorm humanity or any other subject anywhere within a 15km radius around Tel-Aviv.</p>
+          <p>It could be at a restaurant or just eat sandwiches in a park. If it costs money - we split the bill in half.</p>
+          <a href="mailto:fade@faderud.com?subject=Let%27s%20have%20lunch!&body=Hey%2C%20Fade!%0A%0AI%27d%20like%20to%20discuss%20the%20following%20stuff%20with%20you%20over%20lunch%3A%0A" class="button">Make it happen</a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="js/debounce-lodash.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      sticky('nav');
+      window.addEventListener('scroll', wasScrolled);
+    </script>
   </body>
 </html>
