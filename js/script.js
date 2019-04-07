@@ -37,6 +37,16 @@ function smoothScroll(selector) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-  document.body.dataset.ready = true;
-});
+var CAROUSEL_INTERVAL = 2500; // miliseconds
+function roundrobin(parentSel, itemsSel) {
+  var numOfItems = document.querySelectorAll(itemsSel).length;
+  var parent = document.querySelector(parentSel);
+  var selectedIdx = 0;
+  
+  window.setInterval(next, CAROUSEL_INTERVAL);
+
+  function next() {
+    selectedIdx = (selectedIdx + 1) % numOfItems;
+    parent.dataset.selected = selectedIdx;
+  }
+}

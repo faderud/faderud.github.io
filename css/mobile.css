@@ -77,7 +77,7 @@ nav a[href="#"] {
 }
 
 #main h1 em {
-  --anim-translate-x: 10px; /* https://bit.ly/2uP3qeS */
+  --x-offset: -10px; /* https://bit.ly/2uP3qeS */
   top: 44px;
 }
 
