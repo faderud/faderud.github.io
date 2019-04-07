@@ -36,3 +36,7 @@ function smoothScroll(selector) {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.body.dataset.ready = true;
+});

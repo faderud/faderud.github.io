@@ -175,6 +175,7 @@ body.scrolled #scroll-indicator svg {
   animation-duration: calc(var(--anim-duration) * var(--item-count));
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
 
 #main h1 em:nth-of-type(1){
@@ -192,6 +193,10 @@ body.scrolled #scroll-indicator svg {
 
 #main h1 em:nth-of-type(4){
   animation-delay: calc(var(--anim-duration) *3);
+}
+
+body[data-ready="true"] #main h1 em {
+  animation-play-state: running;
 }
 
 @keyframes carousel {
