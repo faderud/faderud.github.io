@@ -3,10 +3,6 @@ body, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 :root {
   --primary: #079e92;
   --secondary: #02786f;
@@ -14,6 +10,15 @@ a {
   --text-color: #7e7e7e;
   --text-light: #9b9b9b;
   --bg-color: #f0f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 html {
@@ -85,6 +90,7 @@ p {
   color: var(--heading);
   border-radius: 19px;
   text-transform: uppercase;
+  text-decoration: none;
   border: solid 1px var(--primary);
   transition: color 150ms linear, background-color 150ms linear;
   display: inline-block;
