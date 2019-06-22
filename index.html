@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/fyu8lpp.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 600px)" />
+    <link rel="stylesheet" href="css/desktop-1024.css" media="screen and (max-width: 1024px)" />
     <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 600px)" />
   </head>
   <body>
@@ -92,7 +93,7 @@
       </section>
 
       <section class="project">
-        <div class="left">
+        <div class="left pad-w280">
           <h3>I enabled products to respond to their users</h3>
           <h5>Product Manager and Designer<br /><a href="https://theneura.com" target="_blank">@ Neura</a></h5>
           <small>During 2015-2018</small>
@@ -112,7 +113,7 @@
       </section>
 
       <section class="project">
-        <div class="left">
+        <div class="left pad-w280">
           <h3>Helped developers personalize their products</h3>
           <h5>Product Manager and Designer<br /><a href="https://theneura.com" target="_blank">@ Neura</a></h5>
           <small>During 2015-2018</small>
@@ -133,7 +134,7 @@
       </section>
 
       <section class="project with-extra-content">
-        <div>
+        <div id="phone">
           <div class="left">
             <h3>Worked on the first contextual phone</h3>
             <h5>Head of Product Design<br />@ EverythingMe</h5>
@@ -142,20 +143,22 @@
             <a href="https://thenextweb.com/apps/2015/11/22/everythingme-launcher-is-shutting-down/" target="_blank" class="button">Project Shut Down in 2015</a>
           </div>
           <div class="right" id="evme">
-            <picture>
-              <source media="(min-width: 600px)" srcset="img/evme_mobile1@2x.jpg">
-              <img src="" width="280" height="433" id="evme_mobile1" class="desktop-only" />
-            </picture>
+            <div id="firefox_os">
+              <picture>
+                <source media="(min-width: 600px)" srcset="img/evme_mobile1@2x.jpg">
+                <img src="" width="280" height="433" id="evme_mobile1" class="desktop-only" />
+              </picture>
 
-            <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/evme_firefoxos_mobile.png 1x, img/mobile/evme_firefoxos_mobile@2x.png 2x, img/mobile/evme_firefoxos_mobile@3x.png 3x">
-              <img src="img/evme_firefoxos_mobile@2x.jpg" width="229" height="404" id="evme_firefoxos_mobile" class="mobile-no-shadow" />
-            </picture>
+              <picture>
+                <source media="(max-width: 600px)" srcset="img/mobile/evme_firefoxos_mobile.png 1x, img/mobile/evme_firefoxos_mobile@2x.png 2x, img/mobile/evme_firefoxos_mobile@3x.png 3x">
+                <img src="img/evme_firefoxos_mobile@2x.jpg" width="229" height="404" id="evme_firefoxos_mobile" class="mobile-no-shadow" />
+              </picture>
 
-            <picture>
-              <source media="(min-width: 600px)" srcset="img/firefox@2x.png">
-              <img src="" width="441" height="442" id="firefox" class="desktop-only no-shadow" />
-            </picture>
+              <picture>
+                <source media="(min-width: 600px)" srcset="img/firefox@2x.png">
+                <img src="" width="441" height="442" id="firefox" class="desktop-only no-shadow" />
+              </picture>
+            </div>
 
             <picture>
               <source media="(max-width: 600px)" srcset="img/mobile/evme_mobile_mobile.jpg 1x, img/mobile/evme_mobile_mobile@2x.jpg 2x, img/mobile/evme_mobile_mobile@3x.jpg 3x">
@@ -214,8 +217,8 @@
         </div>
       </section>
 
-      <section class="project">
-          <div class="left">
+      <section class="project" id="the_rest">
+          <div class="left pad-w280">
             <h3>Created countless human experiences</h3>
             <h5>Designer and Head of Design @ Multiple Leading Agencies + Freelancer</h5>
             <small>During 2004-2012</small>

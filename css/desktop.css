@@ -89,7 +89,7 @@ nav:not(.stuck) a[href="#"] {
 }
 
 /* hide if screen narrow */
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1023px) {
   #main .right::before {
     display: none;
   }
