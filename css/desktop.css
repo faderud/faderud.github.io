@@ -44,6 +44,12 @@ section .left {
   padding-right: 124px;
 }
 
+nav .container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
 nav.stuck {
   background-color: white;
   box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
@@ -66,10 +72,9 @@ nav #scroll-indicator {
   margin-left: -7px;
 }
 
-/* hide if screen narrow */
-@media all and (max-width: 960px) {
+@media (orientation: portrait) {
   #main .right::before {
-    display: none;
+    top: 260px;
   }
 }
 
@@ -187,8 +192,13 @@ nav #scroll-indicator {
   margin-bottom: 50px;
 }
 
+@media (portrait: landscape) {
+  footer {
+    min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
+  }
+}
+
 footer {
-  min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
   flex-direction: column;
 }
 
