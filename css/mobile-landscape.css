@@ -168,12 +168,14 @@ nav .button {
 .cards picture:nth-child(1) img,
 .cards picture:nth-child(4) img {
   left: calc(50% - 267px - 7px); /* center + gutter */
+  right: auto;
 }
 
 .cards picture:nth-child(2) img,
 .cards picture:nth-child(3) img,
 .cards picture:nth-child(5) img {
   right: calc(50% - 267px - 7px); /* center + gutter */
+  left: auto;
 }
 
 .cards picture:nth-child(1) img,

@@ -1,0 +1,131 @@
+/* unhide */
+#scroll-indicator {
+  display: unset;
+}
+
+body {
+  margin-top: 62px;
+}
+
+nav {
+  padding: 36px 0 66px;
+}
+
+nav .container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .button {
+  margin-left: 8px;
+}
+
+#scroll-indicator {
+  position: absolute;
+  top: 84px;
+  left: calc(50% - 61px);
+  color: var(--text-color);
+}
+
+#scroll-indicator svg {
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 14px);
+}
+
+#evme_mobile {
+  right: 50px;
+  left: auto;
+}
+
+#evme_firefoxos_mobile {
+  right: 252px;
+}
+
+#firefox_os {
+  position: static;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 68px;
+  letter-spacing: -0.3px;
+}
+
+#main h1 em {
+  top: 68px; 
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 53px;
+}
+
+h3 {
+  font-size: 46px;
+  line-height: 45px;
+}
+
+h4 {
+  font-size: 29px;
+}
+
+#main .left {
+  z-index: 1;
+  position: relative;
+}
+
+#fade_portrait {
+  height: 381px;
+  width: 351px;
+  margin-top: -29px;
+}
+
+#fade_portrait::before {
+  height: 272px;
+  border-top-left-radius: 136px;
+  border-bottom-left-radius: 136px;
+  width: calc(100vw - 40px);
+  right: auto;
+}
+
+#fade_portrait img{
+  width: 358px;
+  height: 341px;
+}
+
+#main .right::before {
+  height: 272px;
+  margin-top: -161px;
+}
+
+#phone {
+  height: 1622px;
+}
+
+footer .button {
+  display: inline-block;
+}
+
+#lets-talk {
+  margin-bottom: 0;
+}
+
+.project .left .button {
+  display: inline-block;
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+
+section#product-design {
+  margin-bottom: 70px;
+}
+
+#product-design h4 {
+  margin-bottom: 30px;
+}
+
+#product-design li {
+  width: 50%;
+}

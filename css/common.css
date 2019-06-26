@@ -128,6 +128,11 @@ nav.stick {
   transition: none; /* no transition when unstuck, cuz u don't want the bg to scroll with the page */
 }
 
+nav.was-stuck #scroll-indicator,
+nav:not(.stuck) a[href="#"] {
+  display: none;
+}
+
 nav a[href="#"] {
   font-size: 26px;
   font-weight: bold;

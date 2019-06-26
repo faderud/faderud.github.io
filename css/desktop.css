@@ -57,11 +57,6 @@ nav #scroll-indicator {
   line-height: 38px;
 }
 
-nav.was-stuck #scroll-indicator,
-nav:not(.stuck) a[href="#"] {
-  display: none;
-}
-
 #main .left, #main .right {
   display: flex;
   align-items: center;
