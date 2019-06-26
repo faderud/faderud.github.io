@@ -106,6 +106,11 @@ a.button:active {
   color: white;
 }
 
+/* hidden by default */
+#evme_mobile1, #firefox, #scroll-indicator, nav a[href="#"] {
+  display: none;
+}
+
 .container, section {
   margin: 0 auto;
 }
@@ -241,6 +246,45 @@ body.scrolled #scroll-indicator svg {
   background-color: var(--primary);
   border-top-left-radius: 170px;
   border-bottom-left-radius: 170px;
+}
+
+@media (orientation: landscape) {
+  #main {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 72px); /* leave room for nav */
+  }
+
+  #main .left, #main .right {
+    display: flex;
+    align-items: center;
+  }
+
+  #main h4 {
+    margin-top: 0;
+  }
+
+  #main .left {
+    flex-grow: 1;
+    z-index: 1;
+    position: relative;
+  }
+
+  nav .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav .button {
+    margin-left: 8px;
+  }
+}
+
+@media (orientation: portrait) {
+  nav .container {
+    text-align: center;
+  }
 }
 
 #projects {
