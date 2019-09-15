@@ -286,6 +286,15 @@ body.scrolled #scroll-indicator svg {
   }
 }
 
+
+/* iPad with landscape orientation. */
+/* read more https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d */              
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {                         
+  #main {
+    min-height: calc(729px - 72px - 31px); 
+  }
+}
+
 @media (orientation: portrait) {
   body {
     margin-top: 62px;
