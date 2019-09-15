@@ -39,11 +39,10 @@ small {
 }
 
 ul {
-  margin: 10px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 169px;
+  display: inline-block;
+  width: 49%;
+  margin-top: 15px !important;
+  vertical-align: top;
 }
 
 section:not(#main) {

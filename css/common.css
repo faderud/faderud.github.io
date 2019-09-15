@@ -24,6 +24,7 @@ a:hover {
 html {
   background-color: var(--bg-color);
   /* scroll-behavior: smooth; // no safari support yet */
+  -webkit-text-size-adjust: none;
 }
 
 body {
@@ -64,7 +65,13 @@ small {
 ul {
   padding: 0;
   list-style: none;
-  margin: 26px 0;
+  margin: 0;
+}
+ul:first-of-type {
+  margin-top: 26px;
+}
+ul:last-of-type {
+  margin-bottom: 26px;
 }
 
 li {
