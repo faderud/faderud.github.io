@@ -1,4 +1,3 @@
-
 body {
   font-weight: 300;
 }
@@ -24,6 +23,12 @@ h4 {
   font-size: 36px;
 }
 
+/* unhide */
+#evme_mobile1, #firefox, #scroll-indicator, nav a[href="#"] {
+  display: unset;
+}
+
+
 .container, section {
   width: 1200px;
   display: flex;
@@ -39,21 +44,16 @@ section .left {
   padding-right: 124px;
 }
 
+nav .container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
 nav.stuck {
   background-color: white;
   box-shadow: 0 7px 40px 0 rgba(0, 0, 0, 0.08);
   transition: background-color 70ms ease-out;
-}
-
-nav .button {
-  background-color: white;
-  margin-left: 8px;
-  border: 0;
-}
-
-nav .container {
-  position: relative;
-  justify-content: flex-end;
 }
 
 nav a[href="#"],
@@ -61,22 +61,6 @@ nav #scroll-indicator {
   position: absolute;
   left: 0;
   line-height: 38px;
-}
-
-nav.was-stuck #scroll-indicator,
-nav:not(.stuck) a[href="#"] {
-  display: none;
-}
-
-#main {
-  flex: 1;
-  min-height: calc(100vh - 72px); /* leave room for nav */
-}
-
-#main .left {
-  flex-grow: 1;
-  z-index: 1;
-  position: relative;
 }
 
 #main .left, #main .right {
@@ -88,10 +72,9 @@ nav:not(.stuck) a[href="#"] {
   margin-left: -7px;
 }
 
-/* hide if screen narrow */
-@media all and (max-width: 1200px) {
+@media (orientation: portrait) {
   #main .right::before {
-    display: none;
+    top: 260px;
   }
 }
 
@@ -209,8 +192,13 @@ nav:not(.stuck) a[href="#"] {
   margin-bottom: 50px;
 }
 
+@media (portrait: landscape) {
+  footer {
+    min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
+  }
+}
+
 footer {
-  min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
   flex-direction: column;
 }
 

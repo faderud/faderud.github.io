@@ -1,10 +1,6 @@
 body {
-  margin: 75px 0 22px;
+  margin-top: 75px;
   font-weight: 400;
-}
-
-.desktop-only {
-  display: none;
 }
 
 h1 {
@@ -55,15 +51,6 @@ nav .button {
   font-size: 16px;
   line-height: 35px;
   border-radius: 18px;
-}
-
-nav .container {
-  text-align: center;  
-}
-
-#scroll-indicator,
-nav a[href="#"] {
-  display: none;
 }
 
 .left, .right.text-only, #evme .cards, .mobile-w290, section:not(.project), .container {

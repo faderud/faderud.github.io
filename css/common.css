@@ -24,12 +24,13 @@ a:hover {
 html {
   background-color: var(--bg-color);
   /* scroll-behavior: smooth; // no safari support yet */
+  -webkit-text-size-adjust: none;
 }
 
 body {
   font-family: effra, sans-serif;
   color: var(--text-color);
-  margin: 0 auto;
+  margin: 0 auto 22px;
   font-size: 20px;
 }
 
@@ -64,7 +65,13 @@ small {
 ul {
   padding: 0;
   list-style: none;
-  margin: 26px 0;
+  margin: 0;
+}
+ul:first-of-type {
+  margin-top: 26px;
+}
+ul:last-of-type {
+  margin-bottom: 26px;
 }
 
 li {
@@ -106,6 +113,11 @@ a.button:active {
   color: white;
 }
 
+/* hidden by default */
+#evme_mobile1, #firefox, #scroll-indicator, nav a[href="#"] {
+  display: none;
+}
+
 .container, section {
   margin: 0 auto;
 }
@@ -121,6 +133,11 @@ nav.stick {
   position: sticky;
   top: 0;
   transition: none; /* no transition when unstuck, cuz u don't want the bg to scroll with the page */
+}
+
+nav.was-stuck #scroll-indicator,
+nav:not(.stuck) a[href="#"] {
+  display: none;
 }
 
 nav a[href="#"] {
@@ -241,6 +258,58 @@ body.scrolled #scroll-indicator svg {
   background-color: var(--primary);
   border-top-left-radius: 170px;
   border-bottom-left-radius: 170px;
+}
+
+@media (orientation: landscape) {
+  #main {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 72px); /* leave room for nav */
+  }
+
+  #main .left, #main .right {
+    display: flex;
+    align-items: center;
+  }
+
+  #main h4 {
+    margin-top: 0;
+  }
+
+  #main .left {
+    flex-grow: 1;
+    z-index: 1;
+    position: relative;
+  }
+
+  nav .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav .button {
+    margin-left: 8px;
+  }
+}
+
+
+/* iPad with landscape orientation. */
+/* read more https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d */              
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {                         
+  #main {
+    min-height: calc(729px - 72px - 31px); 
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    margin-top: 62px;
+  }
+
+  nav .container {
+    text-align: center;
+  }
 }
 
 #projects {

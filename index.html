@@ -27,8 +27,11 @@
     <!-- css and fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/fyu8lpp.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 600px)" />
-    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 600px)" />
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 961px)" />
+    <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1250px) and (min-width: 768px)" />
+    <link rel="stylesheet" href="css/mobile-landscape.css" media="(max-width: 960px) and (min-width: 551px)" />
+    <link rel="stylesheet" href="css/tablet-portrait.css" media="(max-width: 960px) and (min-width: 768px)" />
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 550px)" />
   </head>
   <body>
     <section id="main">
@@ -47,7 +50,7 @@
       <div class="right">
         <div id="fade_portrait">
           <picture>
-            <source media="(max-width: 600px)" srcset="img/mobile/fade_portrait_mobile.png 1x, img/mobile/fade_portrait_mobile@2x.png 2x, img/mobile/fade_portrait_mobile@3x.png 3x">
+            <source media="(max-width: 767px)" srcset="img/mobile/fade_portrait_mobile.png 1x, img/mobile/fade_portrait_mobile@2x.png 2x, img/mobile/fade_portrait_mobile@3x.png 3x">
             <img src="img/fade_portrait@2x.png" alt="Fade Rudnitsky Smiling" width="448" height="427" />
           </picture>
         </div>
@@ -84,6 +87,8 @@
             <li>Product architecture</li>
             <li>Web, mobile and print design</li>
             <li>Branding</li>
+          </ul>
+          <ul>
             <li>Messaging and micro-copywriting</li>
             <li>Music</li>
             <li>Company culture</li>
@@ -92,29 +97,29 @@
       </section>
 
       <section class="project">
-        <div class="left">
+        <div class="left pad-w280">
           <h3>I enabled products to respond to their users</h3>
-          <h5>Product Manager and Designer<br /><a href="https://theneura.com" target="_blank">@ Neura</a></h5>
+          <h5>Product Manager and Designer <br /><a href="https://theneura.com" target="_blank">@ Neura</a></h5>
           <small>During 2015-2018</small>
           <p>Neura is AI as a service, which enables products to securely respond to who their users are and what they do.</p>
           <p>I&rsquo;ve done product planning, definition and execution, coordinated with R&D and customers. Hands-on plus management of external product design teams.</p>
         </div>
         <div class="right" id="neura">
           <picture>
-            <source media="(max-width: 600px)" srcset="img/mobile/neura_web_mobile.jpg 1x, img/mobile/neura_web_mobile@2x.jpg 2x, img/mobile/neura_web_mobile@3x.jpg 3x">
+            <source media="(max-width: 767px)" srcset="img/mobile/neura_web_mobile.jpg 1x, img/mobile/neura_web_mobile@2x.jpg 2x, img/mobile/neura_web_mobile@3x.jpg 3x">
             <img src="img/neura_web@2x.jpg" width="966" height="636" />
           </picture>
           <picture>
-            <source media="(max-width: 600px)" srcset="img/mobile/neura_mobile_mobile.jpg 1x, img/mobile/neura_mobile_mobile@2x.jpg 2x, img/mobile/neura_mobile_mobile@3x.jpg 3x">
+            <source media="(max-width: 767px)" srcset="img/mobile/neura_mobile_mobile.jpg 1x, img/mobile/neura_mobile_mobile@2x.jpg 2x, img/mobile/neura_mobile_mobile@3x.jpg 3x">
             <img src="img/neura_mobile@2x.jpg" id="neura-mobile" class="mobile-w60" width="280" height="501" />
           </picture>
         </div>
       </section>
 
       <section class="project">
-        <div class="left">
+        <div class="left pad-w280">
           <h3>Helped developers personalize their products</h3>
-          <h5>Product Manager and Designer<br /><a href="https://theneura.com" target="_blank">@ Neura</a></h5>
+          <h5>Product Manager and Designer <br /><a href="https://theneura.com" target="_blank">@ Neura</a></h5>
           <small>During 2015-2018</small>
           <a href="https://dev.theneura.com/" target="_blank" class="button">Visit</a>
           <p>Created a developer journey from zero to successful integration across multiple platforms.</p>
@@ -122,18 +127,18 @@
         </div>
         <div class="right">
           <picture>
-            <source media="(max-width: 600px)" srcset="img/mobile/neura_dev_web1_mobile.jpg 1x, img/mobile/neura_dev_web1_mobile@2x.jpg 2x, img/mobile/neura_dev_web1_mobile@3x.jpg 3x">
+            <source media="(max-width: 767px)" srcset="img/mobile/neura_dev_web1_mobile.jpg 1x, img/mobile/neura_dev_web1_mobile@2x.jpg 2x, img/mobile/neura_dev_web1_mobile@3x.jpg 3x">
             <img src="img/neura_dev_web1@2x.jpg" width="960" height="573" />
           </picture>
           <picture>
-            <source media="(max-width: 600px)" srcset="img/mobile/neura_dev_web2_mobile.jpg 1x, img/mobile/neura_dev_web2_mobile@2x.jpg 2x, img/mobile/neura_dev_web2_mobile@3x.jpg 3x">
+            <source media="(max-width: 767px)" srcset="img/mobile/neura_dev_web2_mobile.jpg 1x, img/mobile/neura_dev_web2_mobile@2x.jpg 2x, img/mobile/neura_dev_web2_mobile@3x.jpg 3x">
             <img src="img/neura_dev_web2@2x.jpg" width="960" height="735" />
           </picture>
         </div>
       </section>
 
       <section class="project with-extra-content">
-        <div>
+        <div id="phone">
           <div class="left">
             <h3>Worked on the first contextual phone</h3>
             <h5>Head of Product Design<br />@ EverythingMe</h5>
@@ -142,49 +147,51 @@
             <a href="https://thenextweb.com/apps/2015/11/22/everythingme-launcher-is-shutting-down/" target="_blank" class="button">Project Shut Down in 2015</a>
           </div>
           <div class="right" id="evme">
-            <picture>
-              <source media="(min-width: 600px)" srcset="img/evme_mobile1@2x.jpg">
-              <img src="" width="280" height="433" id="evme_mobile1" class="desktop-only" />
-            </picture>
+            <div id="firefox_os">
+              <picture>
+                <source media="(min-width: 961px)" srcset="img/evme_mobile1@2x.jpg">
+                <img src="" width="280" height="433" id="evme_mobile1" />
+              </picture>
+
+              <picture>
+                <source media="(max-width: 960px)" srcset="img/mobile/evme_firefoxos_mobile.png 1x, img/mobile/evme_firefoxos_mobile@2x.png 2x, img/mobile/evme_firefoxos_mobile@3x.png 3x">
+                <img src="img/evme_firefoxos_mobile@2x.jpg" width="229" height="404" id="evme_firefoxos_mobile" class="mobile-no-shadow" />
+              </picture>
+
+              <picture>
+                <source media="(min-width: 961px)" srcset="img/firefox@2x.png">
+                <img src="" width="441" height="442" id="firefox" class="no-shadow" />
+              </picture>
+            </div>
 
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/evme_firefoxos_mobile.png 1x, img/mobile/evme_firefoxos_mobile@2x.png 2x, img/mobile/evme_firefoxos_mobile@3x.png 3x">
-              <img src="img/evme_firefoxos_mobile@2x.jpg" width="229" height="404" id="evme_firefoxos_mobile" class="mobile-no-shadow" />
-            </picture>
-
-            <picture>
-              <source media="(min-width: 600px)" srcset="img/firefox@2x.png">
-              <img src="" width="441" height="442" id="firefox" class="desktop-only no-shadow" />
-            </picture>
-
-            <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/evme_mobile_mobile.jpg 1x, img/mobile/evme_mobile_mobile@2x.jpg 2x, img/mobile/evme_mobile_mobile@3x.jpg 3x">
+              <source media="(max-width: 767px)" srcset="img/mobile/evme_mobile_mobile.jpg 1x, img/mobile/evme_mobile_mobile@2x.jpg 2x, img/mobile/evme_mobile_mobile@3x.jpg 3x">
               <img src="img/evme_mobile@2x.jpg" width="280" height="498" id="evme_mobile" class="mobile-w60" />
             </picture>
 
             <div class="cards">
               <picture>
-                <source media="(max-width: 600px)" srcset="img/mobile/evme_card1_mobile.jpg 1x, img/mobile/evme_card1_mobile@2x.jpg 2x, img/mobile/evme_card1_mobile@3x.jpg 3x">
+                <source media="(max-width: 767px)" srcset="img/mobile/evme_card1_mobile.jpg 1x, img/mobile/evme_card1_mobile@2x.jpg 2x, img/mobile/evme_card1_mobile@3x.jpg 3x">
                 <img src="img/evme_card1@2x.jpg" width="267" height="245" />
               </picture>
 
               <picture>
-                <source media="(max-width: 600px)" srcset="img/mobile/evme_card2_mobile.jpg 1x, img/mobile/evme_card2_mobile@2x.jpg 2x, img/mobile/evme_card2_mobile@3x.jpg 3x">
+                <source media="(max-width: 767px)" srcset="img/mobile/evme_card2_mobile.jpg 1x, img/mobile/evme_card2_mobile@2x.jpg 2x, img/mobile/evme_card2_mobile@3x.jpg 3x">
                 <img src="img/evme_card2@2x.jpg" width="297" height="193" class="mobile-card-wide" />
               </picture>
 
               <picture>
-                <source media="(max-width: 600px)" srcset="img/mobile/evme_card3_mobile.jpg 1x, img/mobile/evme_card3_mobile@2x.jpg 2x, img/mobile/evme_card3_mobile@3x.jpg 3x">
+                <source media="(max-width: 767px)" srcset="img/mobile/evme_card3_mobile.jpg 1x, img/mobile/evme_card3_mobile@2x.jpg 2x, img/mobile/evme_card3_mobile@3x.jpg 3x">
                 <img src="img/evme_card3@2x.jpg" width="267" height="141" />
               </picture>
 
               <picture>
-                <source media="(max-width: 600px)" srcset="img/mobile/evme_card4_mobile.jpg 1x, img/mobile/evme_card4_mobile@2x.jpg 2x, img/mobile/evme_card4_mobile@3x.jpg 3x">
+                <source media="(max-width: 767px)" srcset="img/mobile/evme_card4_mobile.jpg 1x, img/mobile/evme_card4_mobile@2x.jpg 2x, img/mobile/evme_card4_mobile@3x.jpg 3x">
                 <img src="img/evme_card4@2x.jpg" width="267" height="237" />
               </picture>
 
               <picture>
-                <source media="(max-width: 600px)" srcset="img/mobile/evme_card5_mobile.jpg 1x, img/mobile/evme_card5_mobile@2x.jpg 2x, img/mobile/evme_card5_mobile@3x.jpg 3x">
+                <source media="(max-width: 767px)" srcset="img/mobile/evme_card5_mobile.jpg 1x, img/mobile/evme_card5_mobile@2x.jpg 2x, img/mobile/evme_card5_mobile@3x.jpg 3x">
                 <img src="img/evme_card5@2x.jpg" width="267" height="245" />
               </picture>
             </div>
@@ -196,7 +203,7 @@
           </div>
           <div class="right mobile-w290">
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/evme_logo_mobile.png 1x, img/mobile/evme_logo_mobile@2x.png 2x, img/mobile/evme_logo_mobile@3x.png 3x">
+              <source media="(max-width: 550px)" srcset="img/mobile/evme_logo_mobile.png 1x, img/mobile/evme_logo_mobile@2x.png 2x, img/mobile/evme_logo_mobile@3x.png 3x">
               <img src="img/evme_logo@2x.png" width="780" height="155" class="no-shadow" />
             </picture>
           </div>
@@ -207,47 +214,47 @@
           </div>
           <div class="right">
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/evme_businesscard_mobile.png 1x, img/mobile/evme_businesscard_mobile@2x.png 2x, img/mobile/evme_businesscard_mobile@3x.png 3x">
+              <source media="(max-width: 550px)" srcset="img/mobile/evme_businesscard_mobile.png 1x, img/mobile/evme_businesscard_mobile@2x.png 2x, img/mobile/evme_businesscard_mobile@3x.png 3x">
               <img src="img/evme_businesscard@2x.png" width="855" height="498" class="no-shadow" />
             </picture>
           </div>
         </div>
       </section>
 
-      <section class="project">
-          <div class="left">
+      <section class="project" id="the_rest">
+          <div class="left pad-w280">
             <h3>Created countless human experiences</h3>
             <h5>Designer and Head of Design @ Multiple Leading Agencies + Freelancer</h5>
             <small>During 2004-2012</small>
           </div>
           <div class="right">
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/other_web1_mobile.jpg 1x, img/mobile/other_web1_mobile@2x.jpg 2x, img/mobile/other_web1_mobile@3x.jpg 3x">
+              <source media="(max-width: 768px)" srcset="img/mobile/other_web1_mobile.jpg 1x, img/mobile/other_web1_mobile@2x.jpg 2x, img/mobile/other_web1_mobile@3x.jpg 3x">
               <img src="img/other_web1@2x.jpg" width="960" height="541" />
             </picture>
 
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/other_web2_mobile.jpg 1x, img/mobile/other_web2_mobile@2x.jpg 2x, img/mobile/other_web2_mobile@3x.jpg 3x">
+              <source media="(max-width: 768px)" srcset="img/mobile/other_web2_mobile.jpg 1x, img/mobile/other_web2_mobile@2x.jpg 2x, img/mobile/other_web2_mobile@3x.jpg 3x">
               <img src="img/other_web2@2x.jpg" width="960" height="539" />
             </picture>
 
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/other_web3_mobile.jpg 1x, img/mobile/other_web3_mobile@2x.jpg 2x, img/mobile/other_web3_mobile@3x.jpg 3x">
+              <source media="(max-width: 768px)" srcset="img/mobile/other_web3_mobile.jpg 1x, img/mobile/other_web3_mobile@2x.jpg 2x, img/mobile/other_web3_mobile@3x.jpg 3x">
               <img src="img/other_web3@2x.jpg" width="960" height="656" />
             </picture>
 
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/other_web4_mobile.jpg 1x, img/mobile/other_web4_mobile@2x.jpg 2x, img/mobile/other_web4_mobile@3x.jpg 3x">
+              <source media="(max-width: 768px)" srcset="img/mobile/other_web4_mobile.jpg 1x, img/mobile/other_web4_mobile@2x.jpg 2x, img/mobile/other_web4_mobile@3x.jpg 3x">
               <img src="img/other_web4@2x.jpg" width="960" height="540" />
             </picture>
 
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/other_web5_mobile.jpg 1x, img/mobile/other_web5_mobile@2x.jpg 2x, img/mobile/other_web5_mobile@3x.jpg 3x">
+              <source media="(max-width: 768px)" srcset="img/mobile/other_web5_mobile.jpg 1x, img/mobile/other_web5_mobile@2x.jpg 2x, img/mobile/other_web5_mobile@3x.jpg 3x">
               <img src="img/other_web5@2x.jpg" width="960" height="580" />
             </picture>
 
             <picture>
-              <source media="(max-width: 600px)" srcset="img/mobile/other_web6_mobile.jpg 1x, img/mobile/other_web6_mobile@2x.jpg 2x, img/mobile/other_web6_mobile@3x.jpg 3x">
+              <source media="(max-width: 768px)" srcset="img/mobile/other_web6_mobile.jpg 1x, img/mobile/other_web6_mobile@2x.jpg 2x, img/mobile/other_web6_mobile@3x.jpg 3x">
               <img src="img/other_web6@2x.jpg" width="960" height="670" />
             </picture>
           </div>
@@ -259,21 +266,25 @@
       <h2 id="lets-talk">Let&rsquo;s talk</h2>
       <div id="footer-content">
         <div class="left">
-          <h4>Shoot me an email</h4>
-          <p>It&rsquo;s the best way to get my attention. It might take me some time to get to your email, but I&rsquo;ll be fully mindful to it when I do.</p>
-          <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website" class="button">Email Me</a>
-          <h4 id="social">Social Maybe?</h4>
-          <p>
-            <a href="https://www.linkedin.com/in/faderudnitsky/" target="_blank" id="linkedin">
-              <img src="img/linkedin.svg" alt="Fade Rudnitsky on Linkedin" />
-            </a>
-            <a href="https://twitter.com/FadeRud" target="_blank" id="twitter">
-              <img src="img/twitter.svg" alt="Fade Rudnitsky on Twitter" />
-            </a>
-            <a href="https://medium.com/@faderud" target="_blank" id="medium">
-              <img src="img/medium.svg" alt="Fade Rudnitsky on Medium" />
-            </a>
-          </p>
+          <div>
+            <h4>Shoot me an email</h4>
+            <p>It&rsquo;s the best way to get my attention. It might take me some time to get to your email, but I&rsquo;ll be fully mindful to it when I do.</p>
+            <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website" class="button">Email Me</a>
+          </div>
+          <div id="social">
+            <h4>Social Maybe?</h4>
+            <p>
+              <a href="https://www.linkedin.com/in/faderudnitsky/" target="_blank" id="linkedin">
+                <img src="img/linkedin.svg" alt="Fade Rudnitsky on Linkedin" />
+              </a>
+              <a href="https://twitter.com/FadeRud" target="_blank" id="twitter">
+                <img src="img/twitter.svg" alt="Fade Rudnitsky on Twitter" />
+              </a>
+              <a href="https://medium.com/@faderud" target="_blank" id="medium">
+                <img src="img/medium.svg" alt="Fade Rudnitsky on Medium" />
+              </a>
+            </p>
+          </div>
           <span id="copyright">&copy; Fade Rudnitsky 2019. All Rights Reserved.</span>
         </div>
         <div class="right">
@@ -289,11 +300,6 @@
     <script src="js/smoothscroll.min.js"></script>
     <script src="js/debounce-lodash.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      sticky('nav');
-      roundrobin('#main h1', '#main h1 em');
-      window.addEventListener('scroll', wasScrolled);
-    </script>
     <!-- Simple Analytics -->
     <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
     <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>

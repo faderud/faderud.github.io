@@ -20,8 +20,8 @@ function sticky(selector) {
     }
   }
 
-  window.onscroll = throttle(determineStuck, 100);
-  window.onresize = debounce(updateElTop ,500);  
+  window.addEventListener('scroll', throttle(determineStuck, 100));
+  window.addEventListener('resize', debounce(updateElTop ,500));  
 }
 
 function wasScrolled() {
@@ -50,3 +50,8 @@ function roundrobin(parentSel, itemsSel) {
     parent.dataset.selected = selectedIdx;
   }
 }
+
+
+sticky('nav');
+roundrobin('#main h1', '#main h1 em');
+window.addEventListener('scroll', wasScrolled);
