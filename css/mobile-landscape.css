@@ -157,6 +157,21 @@ nav .button {
   top: -34px;
 }
 
+@media (min-width: 768px) {
+  #evme_mobile {
+    left: 50%;
+  }
+
+  #evme_firefoxos_mobile {
+    left: 50%;
+    margin-left: -378px !important;
+  }
+
+  #firefox_os {
+    position: static;
+  }
+}
+
 
 .cards img {
   position: absolute;
