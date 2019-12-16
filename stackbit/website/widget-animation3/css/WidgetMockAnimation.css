@@ -1,0 +1,988 @@
+@font-face {
+    font-family: "CircularStd-Bold";
+    src: url("../fonts/CircularStd-Bold.otf");
+}
+@font-face {
+    font-family: "CircularStd-Medium";
+    src: url("../fonts/CircularStd-Medium.otf");
+}
+@font-face {
+    font-family: "CircularStd-Medium";
+    src: url("../fonts/CircularStd-Medium.otf");
+}
+
+.flow-layer {
+    position: absolute;
+    overflow: visible;
+    box-sizing: border-box;
+    border-width: 0px;
+}
+
+.flow-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 0px;
+}
+
+.flow-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0px;
+}
+
+#WidgetMockAnimation.flow-artboard {
+    width: 400px;
+    height: 398px;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+    visibility: visible;
+}
+
+#WidgetMockAnimation .widget {
+    width: 360px;
+    height: 206px;
+    left: 20px;
+    top: 13px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    border-radius: 21px;
+
+    overflow: hidden;
+}
+
+#WidgetMockAnimation .widget-border {
+    border-width: 0px;
+    border-radius: 21px;
+    border-color: #000000;
+}
+
+#WidgetMockAnimation .widget_base {
+    width: 360px;
+    height: 482.63px;
+    left: 0px;
+    top: 0px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    filter: drop-shadow(0px 7px 15px #006CA126);
+    overflow: visible;
+}
+
+#WidgetMockAnimation .widget_base-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    stroke: #FF007500;
+    fill: #82949F;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .header_bg {
+    width: 360px;
+    height: 174px;
+    left: 0px;
+    top: 0px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .header_bg-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #41A7FC;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .card_bg {
+    width: 340px;
+    height: 74px;
+    left: 10px;
+    top: 108px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    filter: drop-shadow(0px 7.5px 0px #1E6B9D00);
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+#WidgetMockAnimation .card_bg-border {
+    border-width: 0px;
+    border-radius: 15px;
+    border-color: #000000;
+}
+
+#WidgetMockAnimation .card_bg-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    stroke: #FF006B00;
+    fill: #FFFFFF;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .btn_widget_close {
+    width: 30px;
+    height: 30px;
+    left: 320px;
+    top: 23px;
+    transform: translate(-0%, -50%) rotate(0deg);
+    transform-origin: 0% 50%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .btn_base {
+    width: 29.19px;
+    height: 29.43px;
+    left: 15px;
+    top: 15.12px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .btn_base-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #FFFFFF;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .arrow_small {
+    width: 7.23px;
+    height: 7.29px;
+    left: 17.36px;
+    top: 12.75px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0.7;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .arrow_small-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #41A8FC;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .arrow_big {
+    width: 10.37px;
+    height: 10.46px;
+    left: 12.76px;
+    top: 17.58px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .arrow_big-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #41A8FC;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .live_state_content {
+    width: 300px;
+    height: 32px;
+    left: 30px;
+    top: 130px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .btn_edit_page {
+    width: 89px;
+    height: 32px;
+    left: 300px;
+    top: 0px;
+    transform: translate(-100%, -0%) rotate(0deg);
+    transform-origin: 100% 0%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .primary_btn_bg {
+    width: 89px;
+    height: 32px;
+    left: 44.5px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .primary_btn_bg-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .primary_btn_text {
+    width: 61px;
+    height: 18px;
+    left: 44px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Bold";
+    font-size: 14px;
+    text-anchor: middle;
+    inline-size: 61;
+    text-align: initial;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .text_line_mock {
+    width: 139px;
+    height: 7px;
+    left: 24px;
+    top: 13px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0.4;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_line_mock-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .icon_v_in_circle {
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    top: 8px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .icon_v_in_circle-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #14C474;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .inline_editing_state_content {
+    width: 280px;
+    height: 36.75px;
+    left: 193.45px;
+    top: 161.88px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_field {
+    width: 280px;
+    height: 35px;
+    left: -13.45px;
+    top: 72.5px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0.95;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_field_single_line_base {
+    width: 280px;
+    height: 35px;
+    left: 140px;
+    top: 17.5px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_field_single_line_base-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    stroke: #1E6B9D28;
+    fill: #FFFFFF;
+    stroke-miterlimit: 10;
+}
+#WidgetMockAnimation .rectangle {
+    width: 1px;
+    height: 7px;
+    left: 10px;
+    top: 13px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .rectangle-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .rectangle_1 {
+    width: 0.01px;
+    height: 7px;
+    left: -13.45px;
+    top: 50.5px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .rectangle_1-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .contentful_avatar {
+    width: 1px;
+    height: 1.15px;
+    left: 246.55px;
+    top: -4.5px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .contentful {
+    width: 1px;
+    height: 1.15px;
+    left: 0.5px;
+    top: 0.58px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path {
+    width: 0.38px;
+    height: 0.87px;
+    left: 0.19px;
+    top: 0.58px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #FFD85F;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_1 {
+    width: 0.87px;
+    height: 0.38px;
+    left: 0.56px;
+    top: 0.2px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_1-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #3BB4E7;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_2 {
+    width: 0.87px;
+    height: 0.38px;
+    left: 0.56px;
+    top: 0.95px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_2-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #ED5C68;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_3 {
+    width: 0.25px;
+    height: 0.25px;
+    left: 0.25px;
+    top: 0.27px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_3-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #308BC5;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_4 {
+    width: 0.25px;
+    height: 0.25px;
+    left: 0.25px;
+    top: 0.89px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_4-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #D5465F;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .shape {
+    width: 1px;
+    height: 1px;
+    left: 265.55px;
+    top: -4.5px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .shape-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E3480;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .text_line_mock_1 {
+    width: 0.01px;
+    height: 7px;
+    left: -13.45px;
+    top: 0.5px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_line_mock_1-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .preview_state_content {
+    width: 240.05px;
+    height: 36.26px;
+    left: 220px;
+    top: 158px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_line_mock2 {
+    width: 1px;
+    height: 7px;
+    left: -59.96px;
+    top: 20px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_line_mock2-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .text_line_mock_2 {
+    width: 0.01px;
+    height: 7px;
+    left: -59.96px;
+    top: 1px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_line_mock_2-border {
+    border-width: 1px;
+    border-radius: 0px;
+    border-color: #000000;
+}
+
+#WidgetMockAnimation .text_line_mock_2-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .btn_publish {
+    width: 78px;
+    height: 32px;
+    left: 142.04px;
+    top: -1px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .primary_btn_bg_1 {
+    width: 78px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .primary_btn_bg_1-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .primary_btn_text_1 {
+    width: 48px;
+    height: 18px;
+    left: 40px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Bold";
+    font-size: 14px;
+    text-anchor: middle;
+    inline-size: 48;
+    text-align: center;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .rebuilding_state_content {
+    width: 151px;
+    height: 32px;
+    left: 173.45px;
+    top: 172.76px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .btn_view_log {
+    width: 136px;
+    height: 32px;
+    left: -57.95px;
+    top: 107.24px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .secondary_btn_bg {
+    width: 136px;
+    height: 32px;
+    left: 68px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .secondary_btn_bg-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #C3DAE866;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .text {
+    width: 60px;
+    height: 18px;
+    left: 67.5px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Medium";
+    font-size: 14px;
+    text-anchor: middle;
+    inline-size: 60;
+    text-align: center;
+    color: #001E36;
+    overflow: hidden;}
+
+#WidgetMockAnimation .btn_refresh {
+    width: 136px;
+    height: 32px;
+    left: 85.05px;
+    top: 107.24px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .primary_btn_bg_2 {
+    width: 136px;
+    height: 32px;
+    left: 68px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .primary_btn_bg_2-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .primary_btn_text_2 {
+    width: 50px;
+    height: 18px;
+    left: 67.5px;
+    top: 16px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Medium";
+    font-size: 14px;
+    text-anchor: middle;
+    inline-size: 50;
+    text-align: center;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .rectangle_2 {
+    width: 100px;
+    height: 7px;
+    left: -42.95px;
+    top: 72.24px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .rectangle_2-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_5 {
+    width: 8px;
+    height: 6px;
+    left: -53.95px;
+    top: 74.24px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_5-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #14C474;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .rectangle_3 {
+    width: 151px;
+    height: 7px;
+    left: -42.95px;
+    top: 47.24px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .rectangle_3-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_6 {
+    width: 8px;
+    height: 6px;
+    left: -53.95px;
+    top: 52.24px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_6-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #14C474;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .status_indicator_pending {
+    width: 8px;
+    height: 8px;
+    left: -58px;
+    top: 47px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .status_indicator_pending-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #FFA15D;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .rectangle_4 {
+    width: 61px;
+    height: 7px;
+    left: -42.95px;
+    top: 22.24px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .rectangle_4-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .path_7 {
+    width: 8px;
+    height: 6px;
+    left: -53.95px;
+    top: 27.24px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .path_7-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #14C474;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .text_line_mock_3 {
+    width: 61px;
+    height: 7px;
+    left: -58.95px;
+    top: -12.76px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .text_line_mock_3-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #031E34;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+#WidgetMockAnimation .header_title_live {
+    width: 180.2px;
+    height: 25px;
+    left: 46px;
+    top: 43px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Medium";
+    font-size: 20px;
+    text-anchor: middle;
+    inline-size: 180.2;
+    text-align: initial;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .header_title_inline_editing {
+    width: 180.2px;
+    height: 25px;
+    left: 30px;
+    top: 43px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Medium";
+    font-size: 20px;
+    text-anchor: middle;
+    inline-size: 180.2;
+    text-align: initial;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .header_title_live_preview {
+    width: 180.2px;
+    height: 25px;
+    left: 46px;
+    top: 43px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Medium";
+    font-size: 20px;
+    text-anchor: middle;
+    inline-size: 180.2;
+    text-align: initial;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .header_title_rebuilding {
+    width: 180.2px;
+    height: 25px;
+    left: 46px;
+    top: 43px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    background-color: #00000000;
+    overflow: visible;
+    font-family: "CircularStd-Medium";
+    font-size: 20px;
+    text-anchor: middle;
+    inline-size: 180.2;
+    text-align: initial;
+    color: #FFFFFF;
+    overflow: hidden;}
+
+#WidgetMockAnimation .status_indicator {
+    width: 8px;
+    height: 8px;
+    left: 30px;
+    top: 53px;
+    transform: translate(-0%, -0%) rotate(0deg);
+    transform-origin: 0% 0%;
+    background-color: #00000000;
+    overflow: visible;
+}
+
+#WidgetMockAnimation .status_indicator-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #35FDA2;
+    stroke-miterlimit: 10;
+    stroke-width: 0px;
+}
+
+path {
+    fill-rule: evenodd; 
+}
+
+svg {
+   overflow: visible;
+}
