@@ -1,0 +1,12 @@
+/* Main navigation */
+
+.author {
+  display: block;
+}
+
+/* Listen now button */
+
+[data-action="listen-now"] {
+  display: block;
+  text-align: center;
+}

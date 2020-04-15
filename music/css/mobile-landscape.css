@@ -1,0 +1,47 @@
+/* Main navigation */
+
+nav {
+  padding: 3rem;
+}
+
+/* Facebook follow button */
+
+[data-action="facebook-follow"] {
+  font-size: 0;
+  padding: 3.1rem 3.1rem 0 1rem;
+}
+
+/* Article play button */
+
+[data-action="play-button"] {
+  margin-left: -2.7em;
+  margin-top: -2.0em;
+  width: 5.4rem;
+  height: 4.0rem;
+}
+
+/* Article scroll footer */
+
+.scroll-footer {
+  bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+/* Article bottom gap */
+
+article::after {
+  height: 9rem;
+}
+
+/* Footer */
+
+footer {
+  left: 2rem;
+  bottom: 2rem;
+  font-size: 1rem;
+  visibility: hidden;
+}
+
+.floating-nav > footer {
+  visibility: visible;
+}

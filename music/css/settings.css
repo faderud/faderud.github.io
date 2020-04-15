@@ -1,0 +1,26 @@
+:root {
+  --background-primary-dark:      #000000;
+  --text-primary-dark:            #ffffff;
+  --background-secondary-dark:     #ffffff;
+  --text-secondary-dark:           #000000;
+
+  --background-primary-light:     #ffffff;
+  --text-primary-light:           #000000;
+  --background-secondary-light:   #000000;
+  --text-secondary-light:          #ffffff;
+
+  --opacity-none:     0.00;
+  --opacity-lower:    0.20;
+  --opacity-low:      0.30;
+  --opacity-med:      0.60;
+  --opacity-high:     0.70;
+  --opacity-opaque:   1.00;
+
+  --font-family-base:     effra;
+  --font-size-base:       10px;
+  --font-weight-regular:  400;
+  --font-weight-bold:     700;
+
+  --margin-desktop:   5rem;
+  --margin-mobile:    3rem;
+}

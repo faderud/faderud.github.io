@@ -1,0 +1,371 @@
+/* Themes */
+:root {
+  --background-primary: var(--background-primary-dark);
+  --text-primary: var(--text-primary-dark);
+  --background-secondary: var(--background-secondary-dark);
+  --text-secondary: var(--text-secondary-dark);
+
+  --icon-spotify-primary: var(--icon-spotify-light);
+  --icon-spotify-secondary: var(--icon-spotify-dark);
+  --icon-apple-primary: var(--icon-apple-light);
+  --icon-apple-secondary: var(--icon-apple-dark);
+  --icon-google-primary: var(--icon-google-light);
+  --icon-google-secondary: var(--icon-google-dark);
+  --icon-facebook-primary: var(--icon-facebook-light);
+  --icon-facebook-secondary: var(--icon-facebook-dark);
+}
+
+[data-theme="light"] {
+  --background-primary: var(--background-primary-light);
+  --text-primary: var(--text-primary-light);
+  --background-secondary: var(--background-secondary-light);
+  --text-secondary: var(--text-secondary-light);
+
+  --icon-spotify-primary: var(--icon-spotify-dark);
+  --icon-spotify-secondary: var(--icon-spotify-light);
+  --icon-apple-primary: var(--icon-apple-dark);
+  --icon-apple-secondary: var(--icon-apple-light);
+  --icon-google-primary: var(--icon-google-dark);
+  --icon-google-secondary: var(--icon-google-light);
+  --icon-facebook-primary: var(--icon-facebook-dark);
+  --icon-facebook-secondary: var(--icon-facebook-light);
+}
+
+/* Reset */
+html {
+  -webkit-text-size-adjust: none;
+  font-family: var(--font-family-base), sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  line-height: 1.33;
+}
+
+body {
+  position: relative;
+}
+
+body, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+/* Main navigation */
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 5rem;
+  padding-bottom: 3rem;
+  color: var(--text-primary);
+  pointer-events: none;
+}
+
+nav a {
+  pointer-events: auto;
+}
+
+nav h1 {
+  display: block;
+}
+
+.author {
+  font-weight: var(--font-weight-regular);
+  opacity: var(--opacity-med);
+}
+
+.nav-clip {
+  clip-path: inset(100%);
+}
+
+/* Listen now button */
+
+[data-action="listen-now"] {
+  display: inline-block;
+  padding: 1.2rem 2rem 0.3rem 2rem;
+  margin-top: 1rem;
+  border: 0.1rem solid var(--text-primary);
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+[data-action="listen-now"] .icon {
+  display: inline-block;
+  position: relative;
+  top: -0.4rem;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: top;
+  margin-left: 0.2rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+[data-action="listen-now"] .icon.spotify {
+  background-image: var(--icon-spotify-primary);
+}
+
+[data-action="listen-now"] .icon.apple {
+  background-image: var(--icon-apple-primary);
+}
+
+[data-action="listen-now"] .icon.google {
+  background-image: var(--icon-google-primary);
+}
+
+[data-action="listen-now"] .label.more {
+  text-transform: lowercase;
+  margin-left: 0.3rem;
+}
+
+[data-action="listen-now"]:hover {
+  color: var(--text-secondary);
+  background-color: var(--background-secondary);
+  border-color: var(--background-secondary);
+}
+
+[data-action="listen-now"]:hover .label,
+[data-action="listen-now"]:hover .icon {
+  opacity: var(--opacity-high);
+}
+
+[data-action="listen-now"]:hover .icon.spotify {
+  background-image: var(--icon-spotify-secondary);
+}
+
+[data-action="listen-now"]:hover .icon.apple {
+  background-image: var(--icon-apple-secondary);
+}
+
+[data-action="listen-now"]:hover .icon.google {
+  background-image: var(--icon-google-secondary);
+}
+
+[data-action="listen-now"]:active .label,
+[data-action="listen-now"]:active .icon {
+  opacity: var(--opacity-opaque);
+}
+
+/* Facebook follow button */
+
+[data-action="facebook-follow"] {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  opacity: var(--opacity-high);
+  padding: 1rem 3.9rem 1rem 1rem;
+  float: right;
+}
+
+[data-action="facebook-follow"]::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3.1rem;
+  height: 3.1rem;
+  background: transparent var(--icon-facebook-primary) center center no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+[data-action="facebook-follow"]:hover {
+  opacity: var(--opacity-opaque);
+}
+
+/* Article */
+
+article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  background: var(--background-primary) center center no-repeat;
+  background-size: cover;
+  color: var(--text-primary);
+}
+
+article nav {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.floating-nav article nav {
+  visibility: hidden;
+}
+
+[data-action="play-button"] {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -4.9rem;
+  margin-top: -3.6rem;
+  width: 9.7rem;
+  height: 7.2rem;
+  background: transparent var(--icon-play-normal) center center no-repeat;
+}
+
+[data-action="play-button"]:hover {
+  background-image: var(--icon-play-hover);
+}
+
+[data-action="play-button"]:active {
+  background-image: var(--icon-play-pressed);
+}
+
+[data-action="play-button"] svg {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.scroll-footer .label {
+  opacity: var(--opacity-none);
+}
+
+article:first-of-type .scroll-footer .label,
+nav:first-of-type .scroll-footer .label {
+  opacity: var(--opacity-high);
+}
+
+nav[data-scroll-muted] .scroll-footer .label {
+  opacity: var(--opacity-none);
+}
+
+.scroll-footer .arrow {
+  display: inline-block;
+  position: relative;
+  top: -0.2em;
+  opacity: var(--opacity-lower);
+}
+
+.scroll-footer .arrow::after {
+  display: inline-block;
+  position: relative;
+  width: 1.7rem;
+  height: 1.7rem;
+  transform: rotate(45deg);
+  border: 0.13em solid var(--text-primary);
+  border-left: none;
+  border-top: none;
+  content: "";
+}
+
+nav:first-of-type .scroll-footer .arrow,
+article:first-of-type .scroll-footer .arrow {
+  animation: wave ease-in-out 1s infinite;
+  opacity: var(--opacity-opaque);
+}
+
+nav[data-scroll-muted] .scroll-footer .arrow {
+  animation: none;
+  opacity: var(--opacity-lower);
+}
+
+article:last-of-type .scroll-footer {
+  visibility: hidden;
+}
+
+nav[data-last] .scroll-footer {
+  visibility: hidden;
+}
+
+.floating-nav article .scroll-footer {
+  visibility: hidden;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+}
+
+article::after {
+  flex-shrink: 0;
+  height: 11rem;
+  content: "";
+}
+
+/* Player */
+#player-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#player-inner {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#player-sizer {
+  padding-top: 56.25%;
+}
+
+#player-frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  left: 6rem;
+  bottom: 6rem;
+  font-size: 1.2rem;
+  opacity: var(--opacity-low);
+  pointer-events: none;
+}
+
+nav footer {
+  position: fixed;
+}
+
+.floating-nav > footer {
+  visibility: hidden;
+}
