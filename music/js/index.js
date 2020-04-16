@@ -82,6 +82,8 @@ function populateNavEl(navEl, articleIdx) {
     // Get navigation sub-elements
     var articleTitleEl = articleEl.querySelector(".title");
     var navTitleEl = navEl.querySelector(".title");
+    var articleListenEl = articleEl.querySelector('[data-action="listen-now"]');
+    var navListenEl = navEl.querySelector('[data-action="listen-now"]');
 
     // Propagate article id and theme to the floating navigation element
     propagateAttribute(navEl, "data-article-id", articleEl.getAttribute("id"));
@@ -91,6 +93,9 @@ function populateNavEl(navEl, articleIdx) {
     // Update floating title content
     if (navTitleEl)
       navTitleEl.innerHTML = articleTitleEl && articleTitleEl.innerHTML || "";
+    // Sync listen now link
+    if (navListenEl)
+      navListenEl.href = articleListenEl && articleListenEl.href || "";
   }
 }
 
