@@ -99,7 +99,7 @@ nav h1 {
 }
 
 .nav-clip {
-  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
 }
 
 /* Listen now button */

@@ -46,7 +46,6 @@ function initializeNav() {
 function updateNav() {
   // Get the current dimensions and compute the visible article index
   var docScrollTop = Math.max(document.documentElement.scrollTop, 0);
-  var articleWidth = articles[0].offsetWidth;
   var articleHeight = articles[0].offsetHeight;
   var articleIdx = Math.floor(docScrollTop / articleHeight);
   var articleOffset = docScrollTop % articleHeight;
@@ -72,9 +71,8 @@ function updateNav() {
     navEl.setAttribute("data-scroll-muted", "1");
 
   // Adjust the clipping according to the current scale and scroll
-  var clipHeight = articleHeight - articleOffset - 1;
-  navEl.style.clipPath = "inset(0px 0px " + articleOffset + "px 0px)";
-  navClipEl.style.clipPath = "inset(" + clipHeight + "px 0px 0px 0px)";
+  navEl.style.clip = "rect(0px 100vw calc(100vh - " + articleOffset + "px) 0px)";
+  navClipEl.style.clip = "rect(calc(100vh - " + articleOffset + "px) 100vw 100vh 0px)";
 }
 
 function populateNavEl(navEl, articleIdx) {
