@@ -200,7 +200,7 @@ a.button:active {
   }
 
   #image {
-    margin-bottom: -50px;
+    margin-bottom: -320px;
     margin-right: 8px;
   }
 
@@ -229,7 +229,7 @@ a.button:active {
   }
 
   #image {
-    margin-bottom: -157px;
+    margin-bottom: -320px;
   }
 
   #image img {
@@ -275,7 +275,7 @@ a.button:active {
   }
 
   #image {
-    margin-bottom: -157px;
+    margin-bottom: -130px;
   }
 
   #image img {
@@ -286,7 +286,9 @@ a.button:active {
   h1 {
     font-size: 62px;
     letter-spacing: -0.95px;
-    margin-bottom: 4px;
+    margin-bottom: 17px;
+    width: 260px;
+    line-height: 58px;
   }
 
   p {
@@ -319,11 +321,14 @@ a.button:active {
   #content {
     padding: 30px;
   }
+
+  #image {
+    margin-bottom: -202px;
+  }
   
   #image img {
     width: 250px;
     height: 238px;
-    margin-bottom: -202px;
   }
 
   h1 {
@@ -421,5 +426,11 @@ a.button:active {
 
   footer small {
     font-size: 12px;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 639px) {
+  #image {
+    margin-bottom: -160px;
   }
 }
