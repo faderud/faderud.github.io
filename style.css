@@ -12,6 +12,7 @@
 
 html {
   background: var(--bg-color);
+  -webkit-text-size-adjust: none;
 }
 
 body {
