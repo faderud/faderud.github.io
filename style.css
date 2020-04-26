@@ -11,6 +11,7 @@
 
 html {
   -webkit-text-size-adjust: none;
+  height: 100%;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   background: var(--bg-color);
   margin: 0;
   font-weight: 300;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
 }
 
@@ -274,7 +275,8 @@ a.button:active {
   }
 
   #image {
-    margin-bottom: -130px;
+    margin-bottom: -140px;
+    margin-right: -10px;
   }
 
   #image img {
