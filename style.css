@@ -6,11 +6,12 @@
   --text-color: #ffffff;
   --text-light: #AAACA9;
   --text-lightest: #4E4E4E;
-  --bg-color: #1D1E1F;
+  --bg-color: #000508;
 }
 
 html {
   -webkit-text-size-adjust: none;
+  height: 100%;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   background: var(--bg-color);
   margin: 0;
   font-weight: 300;
-  min-height: 100%;
+  height: 100%;
 }
 
 #container {
@@ -27,7 +28,7 @@ body {
   background-image: url(img/faderud.jpg);
   display: flex;
   align-items: flex-end;
-  min-height: 100vh;
+  min-height: 100%;
   background-position: right bottom;
 }
 
