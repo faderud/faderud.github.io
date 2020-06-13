@@ -1,12 +1,12 @@
 :root {
-  --primary: #079e92;
-  --secondary: #02786f;
-  --third: #23beb2;
-  --heading: #494949;
-  --text-color: #494949;
-  --text-light: #7e7e7e;
-  --text-lightest: #9b9b9b;
-  --bg-color: #EDEDEC;
+  --primary: #A55E41;
+  --secondary: #71361E;
+  --third: #D28160;
+  --heading: #ffffff;
+  --text-color: #ffffff;
+  --text-light: #AAACA9;
+  --text-lightest: #4E4E4E;
+  --bg-color: #000508;
 }
 
 html {
@@ -20,21 +20,22 @@ body {
   background: var(--bg-color);
   margin: 0;
   font-weight: 300;
-  min-height: 100%;
+  height: 100%;
+}
+
+#container {
+  background-size: cover;
+  background-image: url(img/faderud.jpg);
   display: flex;
+  align-items: flex-end;
+  min-height: 100%;
+  background-position: right bottom;
 }
 
 #content {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   min-width: 260px;
-}
-
-#image {
-  flex-grow: 1;
-  flex-direction: column;
-  text-align: right;
 }
 
 footer {
@@ -176,12 +177,12 @@ a.button:active {
 }
 
 #medium {
-  background-color: #12100e;
+  background-color: #413F3D;
   text-indent: 1px;
 }
 
 #medium:hover {
-  background-color: #504D4B;
+  background-color: #908D89;
 }
 
 #medium:active {
@@ -196,12 +197,7 @@ a.button:active {
 @media (min-width: 1440px) {
   #content {
     width: 1240px;
-    padding: 100px 0;
-  }
-
-  #image {
-    margin-bottom: -320px;
-    margin-right: 8px;
+    padding: 100px;
   }
 
   #text p {
@@ -225,16 +221,7 @@ a.button:active {
 @media (min-width: 1024px) and (max-width: 1439px) {
   #content {
     width: 904px;
-    padding: 60px 0;
-  }
-
-  #image {
-    margin-bottom: -320px;
-  }
-
-  #image img {
-    width: 430px;
-    height: 410px;
+    padding: 56px;
   }
 
   #text p {
@@ -270,18 +257,12 @@ a.button:active {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #container {
+    background-position-x: 65%;
+  }
+
   #content {
-    padding: 60px;
-  }
-
-  #image {
-    margin-bottom: -140px;
-    margin-right: -10px;
-  }
-
-  #image img {
-    width: 430px;
-    height: 410px;
+    padding: 64px;
   }
 
   h1 {
@@ -320,16 +301,7 @@ a.button:active {
 
 @media (min-width: 501px) and (max-width: 767px) and (orientation: portrait) {
   #content {
-    padding: 60px;
-  }
-
-  #image {
-    margin-bottom: -60px;
-  }
-
-  #image img {
-    width: 300px;
-    height: 286px;
+    padding: 56px;
   }
 
   h1 {
@@ -368,16 +340,7 @@ a.button:active {
 
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
   #content {
-    padding: 30px;
-  }
-
-  #image {
-    margin-bottom: -202px;
-  }
-  
-  #image img {
-    width: 300px;
-    height: 286px;
+    padding: 56px;
   }
 
   h1 {
@@ -390,7 +353,7 @@ a.button:active {
   p {
     font-size: 16px;
     letter-spacing: -0.18px;
-    width: 340px;
+    width: 430px;
     margin: 20px 0;
   }
 
@@ -406,6 +369,7 @@ a.button:active {
     font-size: 16px;
     margin-top: 30px;
     line-height: normal;
+    padding-right: 170px;
   }
 
   footer .button {
@@ -421,17 +385,13 @@ a.button:active {
 }
 
 @media (min-width: 640px) and (max-width: 767px) and (orientation: landscape) {
-  #content {
-    padding: 30px;
+  #container {
+    background-size: 138%;
+    background-position-x: 50%;
   }
 
-  #image {
-    margin-bottom: -202px;
-  }
-  
-  #image img {
-    width: 250px;
-    height: 238px;
+  #content {
+    padding: 80px 30px 30px;
   }
 
   h1 {
@@ -444,7 +404,7 @@ a.button:active {
   p {
     font-size: 16px;
     letter-spacing: -0.18px;
-    width: 340px;
+    width: 430px;
     margin: 20px 0;
   }
 
@@ -460,6 +420,7 @@ a.button:active {
     font-size: 16px;
     margin-top: 30px;
     line-height: normal;
+    padding-right: 60px;
   }
 
   footer .button {
@@ -474,22 +435,16 @@ a.button:active {
   }
 }
 
-@media (min-width: 535px) and (max-width: 639px) and (orientation: landscape) {
-  #image {
-    margin-bottom: -160px;
+@media (max-width: 767px) and (orientation: portrait), (max-width: 639px) and (orientation: landscape) {
+  #container {
+    background-size: auto 161.9%;
+    background-position-x: 74.6%;
   }
-}
 
-@media (max-width: 500px) and (orientation: portrait), (max-width: 639px) and (orientation: landscape) {
   #content {
-    padding: 30px;
+    padding: 280px 30px 30px;
   }
   
-  #image img {
-    width: 250px;
-    height: 238px;
-  }
-
   #text {
     margin-top: 10px;
   }
@@ -502,10 +457,39 @@ a.button:active {
     width: 260px;
   }
 
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 48px;
+      line-height: 41px;
+    }
+  }
+
+  @media (max-width: 364px) {
+    h1 {
+      font-size: 42px;
+      line-height: 41px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    h1 {
+      font-size: 38px;
+      line-height: 35px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
+
   p {
     font-size: 16px;
     letter-spacing: -0.18px;
-    margin: 26px 0 30px;
+    margin: 46px 0 30px;
+  }
+
+  @media (min-width: 500px) {
+    p {
+      padding-right: 30px;
+    }
   }
 
   #buttons {
