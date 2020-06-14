@@ -87,16 +87,41 @@ nav #scroll-indicator {
 }
 
 #projects {
-  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
   min-width: 1200px;
   flex-direction: column;
   margin-top: 20px;
+  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+}
+
+.project {
+  display: flex;
 }
 
 .project .left {
   width: 335px;
   padding-right: 76px;
   flex-shrink: 0;
+}
+
+/* sticky text elements for desktop view */
+@media (min-width: 1250px) {
+  /* moving overflow prop to body or else sticky position won't work */
+  body {
+    overflow-x: hidden;
+  }
+
+  #projects {
+    overflow-x: initial;
+  }
+
+  .project:not(.extra-content) {
+    align-items: flex-start;
+  }
+
+  .project:not(.extra-content) .left {
+    position: sticky;
+    top: 78px;
+  }
 }
 
 .project h3{
@@ -125,19 +150,11 @@ nav #scroll-indicator {
   position: relative;
 }
 
-.project.with-extra-content {
-  flex-direction: column;
-}
-
-.project.with-extra-content > div {
-  display: flex;
-}
-
-.project .extra-content {
+.extra-content {
   margin-top: 81px;
 }
 
-.project .extra-content .left {
+.extra-content .left {
   display: flex;
   align-items: center;
 }
