@@ -111,7 +111,7 @@ nav #scroll-indicator {
   }
 
   #projects {
-    overflow-x: initial;
+    /*overflow-x: initial;*/   /* Fade: returging #projects overflow-x to initial caused the whole page to have an overscroll despite having it set to "hidden" for body, disabling for now */
   }
 
   .project:not(.extra-content) {
@@ -184,19 +184,19 @@ nav #scroll-indicator {
 #evme_mobile {
   position: absolute;
   bottom: 0;
-  left: 200px; 
+  left: 200px;
 }
 
 #evme_mobile1 {
   position: absolute;
   top: 0;
-  left: 200px; 
+  left: 200px;
 }
 
 #evme_firefoxos_mobile {
   position: absolute;
   top: 201px;
-  left: 122px; 
+  left: 122px;
 }
 
 #firefox {
