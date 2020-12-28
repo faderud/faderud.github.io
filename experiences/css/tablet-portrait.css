@@ -61,13 +61,13 @@ section#product-design {
 }
 
 h1 {
-  font-size: 75px;
-  line-height: 64px;
+  font-size: 80px;
+  line-height: 68px;
   letter-spacing: -0.3px;
 }
 
 #main h1 em {
-  top: 66px;
+  top: 68px; 
 }
 
 h2 {
