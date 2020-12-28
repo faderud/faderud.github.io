@@ -191,7 +191,7 @@ body.scrolled #scroll-indicator svg {
   --in-duration: 300ms;
   --x-offset: -20px;
   position: absolute;
-  top: 86px;
+  top: 172px;
   left: 0;
   opacity: 0;
 }
