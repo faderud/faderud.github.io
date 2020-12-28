@@ -80,7 +80,7 @@ nav .button {
 
 #main h1 em {
   --x-offset: -10px; /* https://bit.ly/2uP3qeS */
-  top: 44px;
+  top: 89px;
 }
 
 #main h1 {
@@ -206,7 +206,7 @@ nav .button {
 
 .cards picture:nth-child(5) img {
   top: 1010px;
-} 
+}
 
 #fade_portrait {
   height: 245px;
