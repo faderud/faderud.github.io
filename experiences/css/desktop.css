@@ -35,13 +35,13 @@ h4 {
 }
 
 section:not(#main), #lets-talk {
-  margin-top: 35px;
+  margin-top: 0px;
   padding-top: 115px; /* for anchor scroll top padding */
 }
 
 section .left {
   width: 579px;
-  padding-right: 124px;
+  padding-right: 110px;
 }
 
 nav .container {
@@ -82,7 +82,7 @@ nav #scroll-indicator {
   margin-top: -87px;
 }
 
-#product-design .right h4 {
+#product-design .center h4 {
   width: 360px;
 }
 
