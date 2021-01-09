@@ -41,8 +41,16 @@ small {
 ul {
   display: inline-block;
   width: 49%;
-  margin-top: 15px !important;
+  /*margin-top: 15px !important;*/
   vertical-align: top;
+}
+
+ul:last-of-type {
+  margin-bottom: 0px;
+}
+
+ul:first-of-type {
+  margin-top: 0px;
 }
 
 section:not(#main) {
@@ -127,7 +135,7 @@ nav .button {
 }
 
 .left {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .extra-content .left {

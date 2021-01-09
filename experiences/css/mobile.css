@@ -39,8 +39,12 @@ ul {
   margin: 10px 0 0;
 }
 
-section:not(#main) {
+section:not(#main, #product-design) {
   margin-bottom: 70px;
+}
+
+section #product-design {
+  margin-bottom: 700px;
 }
 
 nav {
@@ -53,9 +57,15 @@ nav .button {
   border-radius: 18px;
 }
 
-.left, .right.text-only, #evme .cards, .mobile-w290, section:not(.project), .container {
+.right.text-only, #evme .cards, .mobile-w290, section:not(.project), .container {
   width: 290px;
   margin: auto;
+}
+
+.left {
+  width: 290px;
+  margin: auto;
+  margin-top: 40px;
 }
 
 #main {

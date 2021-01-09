@@ -27,7 +27,7 @@ section:not(#main) {
 }
 
 section#product-design {
-  /*margin-bottom: 30px;*/
+  margin-bottom: 30px;
 }
 
 #main .right::before {
@@ -95,14 +95,21 @@ h5 br {
 ul {
   display: inline-block;
   width: 49%;
-  margin-top: 15px !important;
+  /*margin-top: 15px !important;*/
   vertical-align: top;
+}
+
+ul:last-of-type {
+  margin-bottom: 0px;
+}
+
+ul:first-of-type {
+  margin-top: 0px;
 }
 
 #main .left {
   z-index: 1;
   position: relative;
-  margin-bottom: 100px;
 }
 
 #fade_portrait {
@@ -287,7 +294,7 @@ footer h4 {
 }
 
 section#product-design {
-  margin-bottom: 70px;
+  /*margin-bottom: 70px;*/
 }
 
 #product-design h4 {

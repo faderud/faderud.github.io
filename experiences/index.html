@@ -5,6 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="noindex">
 
     <!-- seo -->
     <meta name="description" content="I help teams craft experiences that create a strong bond between their users and their brand, growing their business as a result.">
@@ -30,12 +31,12 @@
 
     <!-- css and fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/fyu8lpp.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 961px)" />
-    <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1250px) and (min-width: 768px)" />
-    <link rel="stylesheet" href="css/mobile-landscape.css" media="(max-width: 960px) and (min-width: 551px)" />
-    <link rel="stylesheet" href="css/tablet-portrait.css" media="(max-width: 960px) and (min-width: 768px)" />
-    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 550px)" />
+    <link rel="stylesheet" href="css-temp/common.css" />
+    <link rel="stylesheet" href="css-temp/desktop.css" media="(min-width: 961px)" />
+    <link rel="stylesheet" href="css-temp/tablet.css" media="(max-width: 1250px) and (min-width: 768px)" />
+    <link rel="stylesheet" href="css-temp/mobile-landscape.css" media="(max-width: 960px) and (min-width: 551px)" />
+    <link rel="stylesheet" href="css-temp/tablet-portrait.css" media="(max-width: 960px) and (min-width: 768px)" />
+    <link rel="stylesheet" href="css-temp/mobile.css" media="(max-width: 550px)" />
   </head>
   <body>
     <section id="main">
@@ -78,25 +79,60 @@
     <div id="projects">
       <section id="product-design">
         <div class="left">
-          <h2>Great experiences form great relationships</h2>
-          <p>There's a secret sauce for creating meaningful, long-term relationships with users. It's a combination of well-thought product structure and empathetic service throughout their journey.
-              <br /><br />
-              My mission is to help your team craft experiences that create a strong bond between your users and your brand, growing your business as a result.
+          <h3>User experience as a strategy</h3>
+          <p>Providing your users with true value is a crucial part of any business' recipe for success. What's yours? Let's figure out where you want to be and how you can start delivering today.
           </p>
         </div>
-        <div class="right text-only">
-          <h4>Skillset built over 15 years of experience</h4>
+        <div class="left">
+          <h3>Creative ideation for any challenge</h3>
+          <p>Whether you have a strategic goal or a specific, KPI-based challenge that needs cracking - I can help your team nail it from ideation through testing and execution.
+          </p>
+        </div>
+      </section>
+      <section id="product-design">
+        <div class="left">
+          <h3>A secret sauce for long-term relationships</h3>
+          <p>My mission is to help your team craft experiences that create a strong bond between your customers and your brand, growing your business as a result.
+          </p>
+        </div>
+        <div class="left">
+          <h3>Skillset built over 15 years of experience</h3>
           <ul>
             <li>Product architecture from MVP to long-term planning</li>
             <li>Design of software, hardware, and real-life experiences</li>
           </ul>
           <ul>
-            <li>Outward and inward branding and communication of features and strategy</li>
-            <li>Company culture and team building</li>
+            <li>Branding and communication of features and strategy</li>
+            <li>Company culture and product team building</li>
           </ol>
         </div>
       </section>
-
+      <footer class="container">
+        <h2 id="lets-talk">Let&rsquo;s talk</h2>
+        <div id="footer-content">
+          <div class="left">
+            <div>
+              <h4>Shoot me an email</h4>
+              <p>It&rsquo;s the best way to get my attention. I'm at <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website">fade@faderud.com</a></p>
+              <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website" class="button">Email Me</a>
+            </div>
+          </div>
+          <div class="right">
+            <h4>Social Maybe?</h4>
+            <p>
+              <a href="https://www.linkedin.com/in/fadeRudman/" target="_blank" id="linkedin">
+                <img src="../img/linkedin.svg" alt="Fade Rudman on Linkedin" />
+              </a>
+              <a href="https://twitter.com/FadeRud" target="_blank" id="twitter">
+                <img src="../img/twitter.svg" alt="Fade Rudman on Twitter" />
+              </a>
+              <a href="https://medium.com/@faderud" target="_blank" id="medium" onclick="sa_event('social_medium')";>
+                <img src="../img/medium.svg" alt="Fade Rudman on Medium" />
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
       <section class="project" id="the_rest">
         <div class="left pad-w280">
           <h3>Made the Web, Better</h3>
@@ -233,7 +269,7 @@
       </section>
       <section class="project extra-content">
         <div class="left">
-          <p>Flexible branding systems, built to adjust according to world events and various contexts</p>
+          <p>Flexible branding systems, built to adjust according to world events and various contexts.</p>
         </div>
         <div class="right mobile-w290">
           <picture>
@@ -244,7 +280,7 @@
       </section>
       <section class="project extra-content">
         <div class="left">
-          <p>Branded collateral, contextual to its owner</p>
+          <p>Branded collateral, contextual to its owner.</p>
         </div>
         <div class="right">
           <picture>
@@ -253,6 +289,7 @@
           </picture>
         </div>
       </section>
+
       </div>
     </div>
 
@@ -262,8 +299,8 @@
         <div class="left">
           <div>
             <h4>Shoot me an email</h4>
-            <p>It&rsquo;s the best way to get my attention.</p>
-            <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website" target="_blank" class="button">Email Me</a>
+            <p>It&rsquo;s the best way to get my attention. I'm at <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website">fade@faderud.com</a></p>
+            <a href="mailto:fade@faderud.com?subject=Hey%2C%20I%27m%20coming%20from%20your%20website" class="button">Email Me</a>
           </div>
           <span id="copyright">&copy; Fade Rudman 2021. All Rights Reserved.</span>
         </div>
