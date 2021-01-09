@@ -1,0 +1,401 @@
+/* reset */
+body, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+:root {
+  --primary: #079e92;
+  --secondary: #02786f;
+  --heading: #494949;
+  --text-color: #7e7e7e;
+  --text-light: #9b9b9b;
+  --bg-color: #f0f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+html {
+  background-color: var(--bg-color);
+  /* scroll-behavior: smooth; // no safari support yet */
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  font-family: effra, sans-serif;
+  color: var(--text-color);
+  margin: 0 auto 22px;
+  font-size: 20px;
+}
+
+h1, h3 {
+  font-weight: 500;
+  color: var(--heading);
+}
+
+h2 {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+h4 {
+  font-weight: normal;
+  color: var(--heading);
+  letter-spacing: -0.4px;
+}
+
+h5 {
+  font-size: 18px;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+small {
+  font-size: 18px;
+  color: var(--text-light);
+  display: block;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+ul:first-of-type {
+  margin-top: 9px;
+}
+ul:last-of-type {
+  margin-bottom: 26px;
+}
+
+li {
+  background: url('../img/list-item.svg') left 6px no-repeat;
+  padding: 7px 0 6px 32px;
+  margin-bottom: 5px;
+}
+
+em {
+  color: var(--primary);
+  font-style: normal;
+}
+
+p {
+  margin: 12px 0;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 38px;
+  padding: 0 16px;
+  color: var(--heading);
+  border-radius: 19px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid 1px var(--primary);
+  transition: color 150ms linear, background-color 150ms linear;
+  display: inline-block;
+}
+
+a.button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+a.button:active {
+  background-color: var(--secondary);
+  color: white;
+}
+
+/* hidden by default */
+#evme_mobile1, #firefox, #scroll-indicator, nav a[href="#"] {
+  display: none;
+}
+
+.container, section {
+  margin: 0 auto;
+}
+
+nav {
+  height: 38px;
+  padding: 20px 0;
+  z-index: 1;
+}
+
+nav.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: none; /* no transition when unstuck, cuz u don't want the bg to scroll with the page */
+}
+
+nav.was-stuck #scroll-indicator,
+nav:not(.stuck) a[href="#"] {
+  display: none;
+}
+
+nav a[href="#"] {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+  color: var(--heading);
+}
+
+nav .button {
+  background-color: white;
+  border: 0;
+}
+
+#scroll-indicator {
+  color: #c4c4c4;
+}
+
+/* the arrow */
+#scroll-indicator svg {
+  fill: var(--primary);
+  margin-right: 6px;
+  position: relative;
+  top: 1px;
+  animation: hover 1s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* stop arrow animation when scrolled */
+body.scrolled #scroll-indicator svg {
+  animation: none;
+}
+
+/* arrow animation */
+@keyframes hover {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+#main h1 {
+  margin: 9px 0 19px;
+  position: relative;
+}
+
+#main h1 em {
+  --out-duration: 200ms;
+  --in-duration: 300ms;
+  --x-offset: -20px;
+  position: absolute;
+  top: 174px;
+  left: 0;
+  opacity: 0;
+}
+
+#main h1[data-selected="0"] em:nth-child(1),
+#main h1[data-selected="1"] em:nth-child(2),
+#main h1[data-selected="2"] em:nth-child(3),
+#main h1[data-selected="3"] em:nth-child(4),
+#main h1[data-selected="4"] em:nth-child(5) {
+  animation-name: heading-in;
+  animation-duration: var(--in-duration);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+#main h1:not([data-selected]) em:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes heading-in {
+  from {
+    opacity: 0;
+    transform: translateX(var(--x-offset));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* infinite green strip */
+#main .right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 340px;
+  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
+  width: calc(100% - 340px); /* so it doesn't create a page overflow-x */
+  height: 340px;
+  margin-top: -181px;
+}
+
+#fade_portrait {
+  position: relative;
+  height: 477px;
+  width: 439px;
+  background: var(--bg-color); /* hides the background color strip */
+}
+
+#fade_portrait img {
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+}
+
+#fade_portrait::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 340px;
+  width: 100%;
+  background-color: var(--primary);
+  border-top-left-radius: 170px;
+  border-bottom-left-radius: 170px;
+}
+
+@media (orientation: landscape) {
+  #main {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 72px); /* leave room for nav */
+  }
+
+  #main .left, #main .right {
+    display: flex;
+    align-items: center;
+  }
+
+  #main h4 {
+    margin-top: 0;
+  }
+
+  #main .left {
+    flex-grow: 1;
+    z-index: 1;
+    position: relative;
+  }
+
+  nav .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav .button {
+    margin-left: 8px;
+  }
+}
+
+
+/* iPad with landscape orientation. */
+/* read more https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+  #main {
+    min-height: calc(729px - 72px - 31px);
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    margin-top: 62px;
+  }
+
+  nav .container {
+    text-align: center;
+  }
+}
+
+#projects {
+  overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+}
+
+#projects section:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.project .right img {
+  vertical-align: bottom; /* removes unnecessary bottom margin */
+}
+
+#evme .cards img {
+  margin: 0 auto 16px;
+  display: block;
+  border-radius: 3px;
+}
+
+picture:last-of-type img {
+  margin-bottom: 0 !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+#social {
+  margin-top: 36px;
+}
+
+#linkedin, #twitter, #medium {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-right: 4px;
+  overflow: hidden;
+  border-radius: 50%;
+  line-height: 46px;
+}
+
+#linkedin {
+  background-color: #0071a1;
+}
+
+#linkedin:hover {
+  background-color: #1a96cb;
+}
+
+#linkedin:active {
+  background-color: #00567b;
+}
+
+#twitter {
+  background-color: #1da1f2;
+  text-indent: 1px;
+}
+
+#twitter:hover {
+  background-color: #50bcff;
+}
+
+#twitter:active {
+  background-color: #0979bd;
+}
+
+#medium {
+  background-color: #12100e;
+  text-indent: 1px;
+}
+
+#medium:hover {
+  background-color: #504D4B;
+}
+
+#medium:active {
+  background-color: #000000;
+}
+
+#copyright {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+#footer-content .button {
+  margin-top: 21px;
+}

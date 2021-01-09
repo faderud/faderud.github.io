@@ -1,25 +1,56 @@
-/* unhide */
-#scroll-indicator {
-  display: unset;
+body {
+  font-weight: 400;
 }
 
-nav {
-  padding: 36px 0 66px;
+h1 {
+  font-size: 52px;
+  line-height: 44.7px;
+  letter-spacing: -0.2px;
 }
 
-nav .container {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
+h2 {
+  font-size: 35px;
+  line-height: 37px;
+  padding-top: 66px;
 }
 
-nav .button {
-  margin-left: 8px;
+h3 {
+  font-size: 28px;
+  line-height: 30px;
+  margin-bottom: 21px;
 }
 
-.container, section {
-  width: auto;
-  margin: 0 40px;
+h4 {
+  font-size: 23px;
+  letter-spacing: -0.3px;
+  margin-top: 30px;
+}
+
+h5 {
+  margin-bottom: 4px;
+}
+
+h5 br {
+  display: none;
+}
+
+small {
+  margin-bottom: 4px;
+}
+
+ul {
+  display: inline-block;
+  width: 49%;
+  /*margin-top: 15px !important;*/
+  vertical-align: top;
+}
+
+ul:last-of-type {
+  margin-bottom: 0px;
+}
+
+ul:first-of-type {
+  margin-top: 0px;
 }
 
 section:not(#main) {
@@ -27,106 +58,52 @@ section:not(#main) {
 }
 
 section#product-design {
-  /*margin-bottom: 30px;*/
+  margin-bottom: 0px;
 }
 
 #main .right::before {
   display: none;
 }
 
-#scroll-indicator {
-  position: absolute;
-  top: 84px;
-  left: calc(50% - 61px);
-  color: var(--text-color);
+@media (orientation: landscape) {
+  #main {
+    min-height: calc(100vh - 67px);
+  }
 }
 
-#scroll-indicator svg {
-  position: absolute;
-  top: 30px;
-  left: calc(50% - 14px);
+.container, section {
+  width: auto;
+  margin: 0 40px;
 }
 
-#evme_mobile {
-  right: 50px;
-  left: auto;
+nav {
+  padding: 15px 0 0;
 }
 
-#evme_firefoxos_mobile {
-  right: 252px;
-}
-
-#firefox_os {
-  position: static;
-}
-
-h1 {
-  font-size: 80px;
-  line-height: 68px;
-  letter-spacing: -0.3px;
+nav .button {
+  font-size: 16px;
+  line-height: 35px;
+  border-radius: 18px;
 }
 
 #main h1 em {
-  top: 138px;
+  --x-offset: -10px; /* https://bit.ly/2uP3qeS */
+  top: 89px;
 }
 
-h2 {
-  font-size: 56px;
-  line-height: 53px;
-  padding-top: 66px;
+#main h1 {
+  margin-left: -3px;
 }
 
-h3 {
-  font-size: 46px;
-  line-height: 45px;
-  margin-bottom: 21px;
-}
-
-h4 {
-  font-size: 29px;
-  letter-spacing: -0.3px;
-  margin-top: 30px;
-}
-
-h5 br {
-  display: none;
-}
-
-ul {
-  display: inline-block;
-  width: 49%;
-  margin-top: 15px !important;
-  vertical-align: top;
-}
-
-#main .left {
-  z-index: 1;
-  position: relative;
-  margin-bottom: 100px;
-}
-
-#fade_portrait {
-  height: 381px;
-  width: 351px;
-  margin-top: -29px;
-}
-
-#fade_portrait::before {
-  height: 272px;
-  border-top-left-radius: 136px;
-  border-bottom-left-radius: 136px;
-  width: calc(100vw - 40px);
-  right: auto;
-}
-
-#fade_portrait img{
-  width: 358px;
-  height: 341px;
+#main .right {
+  flex-basis: 233px;
 }
 
 #main .right::before {
-  height: 272px;
-  margin-top: -161px;
+  left: 0;
+  width: 100vw;
+  height: 177px;
+  margin-top: -55px;
 }
 
 #projects {
@@ -157,6 +134,10 @@ ul {
   margin-bottom: 40px;
 }
 
+.left {
+  margin-top: 40px;
+}
+
 .extra-content .left {
   margin-bottom: 20px;
 }
@@ -170,11 +151,7 @@ ul {
 }
 
 #phone {
-  height: 1622px;
-}
-
-#the_rest picture:not(:first-of-type) img {
-  width: 100%;
+  height: 1492px;
 }
 
 #evme_mobile {
@@ -190,6 +167,22 @@ ul {
   width: 461px !important;
   top: -34px;
 }
+
+@media (min-width: 768px) {
+  #evme_mobile {
+    left: 50%;
+  }
+
+  #evme_firefoxos_mobile {
+    left: 50%;
+    margin-left: -378px !important;
+  }
+
+  #firefox_os {
+    position: static;
+  }
+}
+
 
 .cards img {
   position: absolute;
@@ -227,6 +220,32 @@ ul {
   top: 1010px;
 }
 
+#fade_portrait {
+  height: 245px;
+  width: auto;
+  flex: 1;
+  margin-top: -22px;
+}
+
+#fade_portrait::before {
+  height: 177px;
+  border-top-left-radius: 88px;
+  border-bottom-left-radius: 88px;
+  width: calc(100% + 40px);
+  right: -40px;
+}
+
+#fade_portrait img {
+  width: 233px;
+  height: 222px;
+  left: 4px;
+}
+
+.left.pad-w280 {
+  width: auto;
+  padding: 0;
+}
+
 footer .left, footer .right {
   margin-right: 0;
 }
@@ -254,7 +273,7 @@ footer .left #social {
 }
 
 footer .button {
-  display: inline-block;
+  display: block;
   text-align: center;
 }
 
@@ -278,18 +297,4 @@ footer h4 {
 
 #social {
   margin-top: 0;
-}
-
-.project .left .button {
-  display: inline-block;
-  margin-top: 14px;
-  margin-bottom: 5px;
-}
-
-section#product-design {
-  margin-bottom: 70px;
-}
-
-#product-design h4 {
-  margin-bottom: 30px;
 }

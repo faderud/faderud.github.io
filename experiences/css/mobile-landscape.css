@@ -50,7 +50,7 @@ section:not(#main) {
 }
 
 section#product-design {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 #main .right::before {
@@ -124,6 +124,10 @@ nav .button {
 
 .project .left {
   margin-bottom: 40px;
+}
+
+.left {
+  margin-top: 40px;
 }
 
 .extra-content .left {
