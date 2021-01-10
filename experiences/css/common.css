@@ -94,23 +94,26 @@ p {
   font-weight: bold;
   line-height: 38px;
   padding: 0 16px;
-  color: var(--heading);
+  color: white;
   border-radius: 19px;
   text-transform: uppercase;
   text-decoration: none;
+  background-color: var(--primary);
   border: solid 1px var(--primary);
   transition: color 150ms linear, background-color 150ms linear;
   display: inline-block;
 }
 
 a.button:hover {
-  background-color: var(--primary);
+  background-color: var(--secondary);
+  text-decoration: none;
   color: white;
 }
 
 a.button:active {
-  background-color: var(--secondary);
-  color: white;
+  color: var(--heading);
+  background-color: white;
+  border: solid 1px var(--primary);
 }
 
 /* hidden by default */
@@ -148,7 +151,7 @@ nav a[href="#"] {
 }
 
 nav .button {
-  background-color: white;
+  background-color: var(--primary);
   border: 0;
 }
 
