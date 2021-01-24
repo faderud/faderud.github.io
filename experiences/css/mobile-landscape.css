@@ -61,6 +61,14 @@ section#product-design {
   margin-bottom: 0px;
 }
 
+section#product-design > div {
+  margin-top: 0;
+}
+
+section#product-design > div > h3 {
+  padding-top: 80px;
+}
+
 #main .right::before {
   display: none;
 }

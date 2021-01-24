@@ -43,8 +43,12 @@ section:not(#main, #product-design) {
   margin-bottom: 70px;
 }
 
-section #product-design {
-  margin-bottom: 700px;
+section#product-design > div {
+  margin-top: 0;
+}
+
+section#product-design > div > h3 {
+  padding-top: 80px;
 }
 
 nav {
