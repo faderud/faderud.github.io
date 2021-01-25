@@ -34,7 +34,20 @@ h4 {
   display: flex;
 }
 
-section:not(#main), #lets-talk {
+section.with-title {
+  flex-direction: column;
+}
+
+section.with-title > div {
+  display: flex;
+}
+
+section.with-title > div > div {
+  width: calc(100% / 3);
+}
+
+section:not(#main),
+#lets-talk {
   margin-top: 30px;
   padding-top: 115px; /* for anchor scroll top padding */
 }
