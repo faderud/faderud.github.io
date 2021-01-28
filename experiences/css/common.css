@@ -350,6 +350,7 @@ picture:last-of-type img {
   width: 40px;
   height: 40px;
   text-align: center;
+  margin-top: 7px;
   margin-right: 4px;
   overflow: hidden;
   border-radius: 50%;

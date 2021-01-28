@@ -54,7 +54,7 @@ section:not(#main),
 
 section .left {
   width: 579px;
-  padding-right: 110px;
+  padding-right: 50px;
 }
 
 nav .container {
@@ -234,11 +234,11 @@ footer {
 
 #footer-content {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 
 footer .left, footer .right {
-  width: 549px;
+  width: 250px;
   margin-right: 22px;
 }
 

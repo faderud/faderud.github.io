@@ -112,6 +112,15 @@ nav .button {
   margin: 0 auto 20px;
 }
 
+
+.project img.customer-logo {
+  width: initial;
+  height: auto;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto 20px 0;
+}
+
 .project picture:first-of-type img {
   margin-top: 40px;
 }
@@ -155,7 +164,7 @@ nav .button {
 }
 
 #footer-content {
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   padding-bottom: 58px;
 }

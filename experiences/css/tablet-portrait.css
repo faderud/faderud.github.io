@@ -61,7 +61,7 @@ section#product-design {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 75px;
   line-height: 68px;
   letter-spacing: -0.3px;
 }
@@ -149,7 +149,15 @@ ul:first-of-type {
   height: auto;
   box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.08);
   display: block;
-  margin: 0 auto 20px !important;
+  margin: 0;
+}
+
+.project img.customer-logo {
+  width: initial;
+  height: auto;
+  box-shadow: none;
+  display: block;
+  margin: auto auto auto 0;
 }
 
 .project picture:first-of-type img {
@@ -249,7 +257,7 @@ footer .left #social {
 }
 
 #footer-content {
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   padding-bottom: 58px;
 }
