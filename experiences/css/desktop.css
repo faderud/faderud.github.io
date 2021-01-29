@@ -24,12 +24,15 @@ h4 {
 }
 
 /* unhide */
-#evme_mobile1, #firefox, #scroll-indicator, nav a[href="#"] {
+#evme_mobile1,
+#firefox,
+#scroll-indicator,
+nav a[href="#"] {
   display: unset;
 }
 
-
-.container, section {
+.container,
+section {
   width: 1200px;
   display: flex;
 }
@@ -46,7 +49,7 @@ section.with-title > div > div {
   width: calc(100% / 3);
 }
 
-section:not(#main),
+section,
 #lets-talk {
   margin-top: 30px;
   padding-top: 115px; /* for anchor scroll top padding */
@@ -76,7 +79,8 @@ nav #scroll-indicator {
   line-height: 38px;
 }
 
-#main .left, #main .right {
+#main .left,
+#main .right {
   display: flex;
   align-items: center;
 }
@@ -124,7 +128,7 @@ nav #scroll-indicator {
   }
 
   #projects {
-    /*overflow-x: initial;*/   /* Fade: returging #projects overflow-x to initial caused the whole page to have an overscroll despite having it set to "hidden" for body, disabling for now */
+    /*overflow-x: initial;*/ /* Fade: returging #projects overflow-x to initial caused the whole page to have an overscroll despite having it set to "hidden" for body, disabling for now */
   }
 
   .project:not(.extra-content) {
@@ -137,7 +141,7 @@ nav #scroll-indicator {
   }
 }
 
-.project h3{
+.project h3 {
   margin-bottom: 29px;
   margin-top: 27px;
 }
@@ -224,7 +228,9 @@ nav #scroll-indicator {
 
 @media (portrait: landscape) {
   footer {
-    min-height: calc(100vh - 39px); /* when scrolling to footer it end up always at the top of the anchor */
+    min-height: calc(
+      100vh - 39px
+    ); /* when scrolling to footer it end up always at the top of the anchor */
   }
 }
 
@@ -237,7 +243,8 @@ footer {
   /*justify-content: space-between;*/
 }
 
-footer .left, footer .right {
+footer .left,
+footer .right {
   width: 310px;
   margin-right: 22px;
 }
