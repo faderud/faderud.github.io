@@ -320,6 +320,7 @@ body.scrolled #scroll-indicator svg {
 
 #projects {
   overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+  padding-bottom: 50px; /* leave room for project visual shadow */
 }
 
 #projects section:last-of-type {
@@ -400,11 +401,34 @@ picture:last-of-type img {
   background-color: #000000;
 }
 
-#copyright {
-  color: var(--text-light);
-  font-size: 14px;
+.contact {
+  flex-direction: column;
 }
 
-#footer-content .button {
+.contact-top {
+  padding-top: 50px;
+}
+
+.contact-content {
+  display: flex;
+}
+
+.contact-content .email {
+  width: 310px;
+  margin-right: 22px;
+}
+
+.contact-content .button {
   margin-top: 21px;
+}
+
+.contact h2 {
+  padding-top: 65px !important;
+}
+
+footer {
+  display: block;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-top: 3px !important;
 }

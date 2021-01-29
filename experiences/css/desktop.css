@@ -50,8 +50,7 @@ section.with-title > div > div {
 }
 
 section,
-#lets-talk {
-  margin-top: 30px;
+.contact h2 {
   padding-top: 115px; /* for anchor scroll top padding */
 }
 
@@ -222,7 +221,7 @@ nav #scroll-indicator {
   left: -59px;
 }
 
-#lets-talk {
+.contact h2 {
   margin-bottom: 50px;
 }
 
@@ -232,24 +231,4 @@ nav #scroll-indicator {
       100vh - 39px
     ); /* when scrolling to footer it end up always at the top of the anchor */
   }
-}
-
-footer {
-  flex-direction: column;
-}
-
-#footer-content {
-  display: flex;
-  /*justify-content: space-between;*/
-}
-
-footer .left,
-footer .right {
-  width: 310px;
-  margin-right: 22px;
-}
-
-#copyright {
-  display: block;
-  margin-top: 18px;
 }

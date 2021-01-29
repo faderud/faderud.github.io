@@ -262,56 +262,10 @@ nav .button {
   padding: 0;
 }
 
-footer .left,
-footer .right {
-  margin-right: 0;
-}
-
-footer .left {
-  display: flex;
-}
-
-footer .left #social {
-  width: 185px;
-  flex-shrink: 0;
-  margin-left: 55px;
-}
-
-#footer-content {
-  flex-direction: row;
-  position: relative;
+.contact-content {
   padding-bottom: 58px;
-}
-
-/* https://bit.ly/2G21mGF */
-#footer-content a.button:hover {
-  background-color: transparent;
-  color: var(--heading);
-}
-
-footer .button {
-  display: block;
-  text-align: center;
-}
-
-/* push copyright to the bottom */
-#copyright {
-  position: absolute;
-  bottom: 1px;
 }
 
 img.mobile-no-shadow {
   box-shadow: none !important;
-}
-
-#lets-talk {
-  margin-bottom: -30px;
-}
-
-footer h4 {
-  margin: 40px 0 4px;
-}
-
-#social {
-  margin-top: 0;
 }

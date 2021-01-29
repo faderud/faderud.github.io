@@ -166,42 +166,43 @@ section:not(.project),
 #evme .cards img:not(.mobile-card-wide) {
   width: 90% !important;
 }
-
-#footer-content {
-  flex-direction: row;
-  position: relative;
-  padding-bottom: 58px;
-}
-
-/* https://bit.ly/2G21mGF */
-#footer-content a.button:hover {
-  background-color: transparent;
-  color: var(--heading);
-}
-
-footer .button {
-  display: block;
-  text-align: center;
-}
-
-/* push copyright to the bottom */
-#copyright {
-  position: absolute;
-  bottom: 1px;
-}
-
 img.mobile-no-shadow {
   box-shadow: none !important;
 }
 
-#lets-talk {
+.contact-top {
+  padding: 0 0 50px;
+  margin-top: -25px;
+}
+
+.contact-bottom {
+  padding: 35px 0 38px;
+}
+
+.contact-content {
+  flex-direction: column;
+}
+
+/* https://bit.ly/2G21mGF */
+.contact a.button:hover {
+  background-color: transparent;
+  color: var(--heading);
+}
+
+.contact .button {
+  display: block;
+  text-align: center;
+}
+
+.contact-content .email {
+  width: auto;
+  margin: 0;
+}
+
+.contact h2 {
   margin-bottom: -30px;
 }
 
-footer h4 {
+.contact h4 {
   margin: 40px 0 4px;
-}
-
-#social {
-  margin-top: 40px;
 }
