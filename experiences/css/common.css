@@ -1,5 +1,10 @@
 /* reset */
-body, h1, h2, h3, h4, h5 {
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
@@ -34,7 +39,8 @@ body {
   font-size: 20px;
 }
 
-h1, h3 {
+h1,
+h3 {
   font-weight: 500;
   color: var(--heading);
 }
@@ -75,7 +81,7 @@ ul:last-of-type {
 }
 
 li {
-  background: url('../img/list-item.svg') left 6px no-repeat;
+  background: url("../img/list-item.svg") left 6px no-repeat;
   padding: 7px 0 6px 32px;
   margin-bottom: 5px;
 }
@@ -117,11 +123,15 @@ a.button:active {
 }
 
 /* hidden by default */
-#evme_mobile1, #firefox, #scroll-indicator, nav a[href="#"] {
+#evme_mobile1,
+#firefox,
+#scroll-indicator,
+nav a[href="#"] {
   display: none;
 }
 
-.container, section {
+.container,
+section {
   margin: 0 auto;
 }
 
@@ -176,12 +186,17 @@ body.scrolled #scroll-indicator svg {
 
 /* arrow animation */
 @keyframes hover {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-5px);
   }
   50% {
     transform: translateY(5px);
   }
+}
+
+#main {
+  overflow: hidden; /* prevents infinite green strip from causing page overscroll */
 }
 
 #main h1 {
@@ -226,23 +241,10 @@ body.scrolled #scroll-indicator svg {
   }
 }
 
-/* infinite green strip */
-#main .right::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 340px;
-  background: linear-gradient(to right, transparent 0%, transparent 50%, var(--primary) 50%, var(--primary) 100%);
-  width: calc(100% - 340px); /* so it doesn't create a page overflow-x */
-  height: 340px;
-  margin-top: -181px;
-}
-
 #fade_portrait {
   position: relative;
   height: 477px;
   width: 439px;
-  background: var(--bg-color); /* hides the background color strip */
 }
 
 #fade_portrait img {
@@ -251,26 +253,28 @@ body.scrolled #scroll-indicator svg {
   bottom: 0;
 }
 
+/* infinite green strip */
 #fade_portrait::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 340px;
-  width: 100%;
+  width: 100vw;
   background-color: var(--primary);
   border-top-left-radius: 170px;
   border-bottom-left-radius: 170px;
 }
 
 @media (orientation: landscape) {
-  #main {
+  #main .container {
     display: flex;
     flex: 1;
     min-height: calc(100vh - 72px); /* leave room for nav */
   }
 
-  #main .left, #main .right {
+  #main .left,
+  #main .right {
     display: flex;
     align-items: center;
   }
@@ -296,11 +300,10 @@ body.scrolled #scroll-indicator svg {
   }
 }
 
-
 /* iPad with landscape orientation. */
 /* read more https://medium.com/@susiekim9/how-to-compensate-for-the-ios-viewport-unit-bug-46e78d54af0d */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
-  #main {
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  #main .container {
     min-height: calc(729px - 72px - 31px);
   }
 }
@@ -317,6 +320,7 @@ body.scrolled #scroll-indicator svg {
 
 #projects {
   overflow-x: hidden; /* prevents overflowing content images from causing page overscroll */
+  padding-bottom: 50px; /* leave room for project visual shadow */
 }
 
 #projects section:last-of-type {
@@ -345,7 +349,9 @@ picture:last-of-type img {
   margin-top: 36px;
 }
 
-#linkedin, #twitter, #medium {
+#linkedin,
+#twitter,
+#medium {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -388,18 +394,41 @@ picture:last-of-type img {
 }
 
 #medium:hover {
-  background-color: #504D4B;
+  background-color: #504d4b;
 }
 
 #medium:active {
   background-color: #000000;
 }
 
-#copyright {
-  color: var(--text-light);
-  font-size: 14px;
+.contact {
+  flex-direction: column;
 }
 
-#footer-content .button {
+.contact-top {
+  padding-top: 50px;
+}
+
+.contact-content {
+  display: flex;
+}
+
+.contact-content .email {
+  width: 310px;
+  margin-right: 22px;
+}
+
+.contact-content .button {
   margin-top: 21px;
+}
+
+.contact h2 {
+  padding-top: 65px !important;
+}
+
+footer {
+  display: block;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-top: 3px !important;
 }

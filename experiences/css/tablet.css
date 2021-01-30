@@ -8,11 +8,13 @@ h1 {
   top: 137px;
 }
 
-section:not(#main), #lets-talk  {
+section:not(#main),
+.contact h2 {
   margin-top: 0;
 }
 
-.container, section {
+.container,
+section {
   width: 924px;
 }
 
@@ -34,7 +36,7 @@ h4 {
   height: 272px;
 }
 
-#fade_portrait img{
+#fade_portrait img {
   width: 358px;
   height: 341px;
 }
@@ -138,11 +140,6 @@ h4 {
   height: auto;
 }
 
-footer .left, footer .right {
+.contact-content .email {
   margin-right: 60px;
-}
-
-.left.pad-w280 {
-  width: 280px;
-  padding-right: 40px;
 }
