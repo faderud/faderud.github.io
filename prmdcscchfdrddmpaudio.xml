@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://media.rss.com/style.xsl"?>
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xml:lang="en" version="2.0">
+  <channel>
+    <title><![CDATA[TPC]]></title>
+    <link>https://rss.com/podcasts/prmdcscchfdrddmpaudio</link>
+    <atom:link href="https://faderud.com/prmdcscchfdrddmpaudio.xml" rel="self" type="application/rss+xml"/>
+    <atom:link rel="hub" href="https://hub.livewire.io/"/>
+    <description><![CDATA[Audio recordings from tpc - for personal use]]></description>
+    <generator>RSS.com v1.6.1</generator>
+    <lastBuildDate>Sun, 03 Jul 2022 14:10:01 GMT</lastBuildDate>
+    <language>en</language>
+    <copyright><![CDATA[Fade Rudman]]></copyright>
+    <itunes:image href="https://assets.rss.com/images/no-cover-1400.jpg"/>
+    <image>
+      <url>https://assets.rss.com/images/no-cover-1400.jpg</url>
+      <title>TPC</title>
+      <link>https://faderud.com/prmdcscchfdrddmpaudio.xml</link>
+    </image>
+    <itunes:summary><![CDATA[Audio recordings from tpc - for personal use]]></itunes:summary>
+    <podcast:locked owner="fade@faderud.com">Yes</podcast:locked>
+    <podcast:funding/>
+    <itunes:author>Fade Rudman</itunes:author>
+    <itunes:owner>
+      <itunes:name>Fade Rudman</itunes:name>
+      <itunes:email>fade@faderud.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:category text="Education">
+      <itunes:category text="Courses"/>
+    </itunes:category>
+    <itunes:category text="Health &amp; Fitness">
+      <itunes:category text="Medicine"/>
+    </itunes:category>
+    <item>
+      <title><![CDATA[A&P]]></title>
+      <itunes:title><![CDATA[A&P]]></itunes:title>
+      <itunes:summary><![CDATA[A&amp;P]]></itunes:summary>
+      <description><![CDATA[<p>A&amp;P</p>]]></description>
+      <link>https://rss.com/podcasts/prmdcscchfdrddmpaudio/541564</link>
+      <enclosure url="https://www.dropbox.com/s/vdefri3itsshyr0/Anatomy%20and%20Physiology%20Mastery.mp3" length="404364463" type="audio/mpeg"/>
+      <guid isPermaLink="false">70964800-0f60-4b0d-8b43-ed09ab0bab0a</guid>
+      <itunes:image href="https://assets.rss.com/images/no-cover-1400.jpg"/>
+      <itunes:duration>16849</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:episode>1</itunes:episode>
+      <itunes:season>1</itunes:season>
+      <itunes:explicit>no</itunes:explicit>
+      <pubDate>Sun, 03 Jul 2022 14:10:01 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
